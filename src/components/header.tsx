@@ -14,11 +14,11 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Briefcase className="h-6 w-6" />
+            <Briefcase className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block font-headline">Artisan Portfolio</span>
           </Link>
           <nav className="flex items-center gap-6 text-sm">
@@ -26,7 +26,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
+                className="transition-colors hover:text-primary text-foreground/80 font-medium"
               >
                 {link.label}
               </Link>
@@ -42,18 +42,18 @@ export default function Header() {
               <span className="sr-only">Toggle Menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left" className="pr-0">
+          <SheetContent side="left" className="pr-0 glass-card">
             <Link href="/" className="mr-6 flex items-center space-x-2">
-                <Briefcase className="h-6 w-6" />
+                <Briefcase className="h-6 w-6 text-primary" />
                 <span className="font-bold font-headline">Artisan Portfolio</span>
             </Link>
             <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-                <div className="flex flex-col space-y-3">
+                <div className="flex flex-col space-y-4">
                     {navLinks.map((link) => (
                     <Link
                         key={link.label}
                         href={link.href}
-                        className="text-muted-foreground"
+                        className="text-muted-foreground hover:text-primary text-lg"
                     >
                         {link.label}
                     </Link>
@@ -64,9 +64,6 @@ export default function Header() {
         </Sheet>
         
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            {/* You can add a command menu here if you want */}
-          </div>
           <nav className="flex items-center">
             <ThemeToggle />
           </nav>
