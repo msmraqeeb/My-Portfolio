@@ -1,0 +1,38 @@
+import Image from 'next/image';
+import { profile } from '@/lib/data';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '../ui/button';
+
+export default function About() {
+  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-picture');
+
+  return (
+    <section id="about">
+      <div className="section-title">
+        <p>About Me</p>
+        <h2>Know Me More</h2>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        <div className="lg:col-span-2">
+          <h3 className="text-2xl font-bold mb-4">
+            I'm <span className="text-primary">{profile.name}</span>, a {profile.roles[0]}
+          </h3>
+          <p className="text-muted-foreground mb-6 text-lg">
+            {profile.about.description}
+          </p>
+        </div>
+        <div className="lg:col-span-1 space-y-4 text-lg">
+          {profile.about.details.map((detail) => (
+            <div key={detail.label} className="border-b border-border pb-2">
+              <span className="font-bold">{detail.label}:</span>
+              <span className="text-muted-foreground ml-2">{detail.value}</span>
+            </div>
+          ))}
+          <Button asChild size="lg" className="rounded-full w-full mt-6">
+            <a href="/alex-doe-cv.pdf" download>Download CV</a>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}

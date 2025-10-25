@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 10%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 217 91% 60%;
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 8%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 347 89% 60%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 217 33% 17%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 28% 17%;
     --muted-foreground: 215 20% 65%;
-    --accent: 217 33% 17%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 217 33% 27%;
-    --input: 217 33% 27%;
-    --ring: 217 91% 60%;
-    --radius: 0.75rem;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 347 89% 60%;
+    --radius: 0.5rem;
   }
  
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 10%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 217 91% 60%;
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 8%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 347 89% 60%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 217 33% 17%;
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 28% 17%;
     --muted-foreground: 215 20% 65%;
-    --accent: 217 33% 17%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 217 33% 27%;
-    --input: 217 33% 27%;
-    --ring: 217 91% 60%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 347 89% 60%;
   }
 }
 
@@ -57,7 +57,7 @@
     @apply bg-background text-foreground;
   }
   section {
-    @apply w-full py-12 md:py-24 lg:py-32;
+    @apply w-full py-20 md:py-28;
   }
 
   .glass-card {
@@ -66,28 +66,26 @@
 }
 
 @layer utilities {
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+  .section-title {
+    @apply relative mb-12 text-center;
   }
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+  .section-title h2 {
+    @apply text-3xl font-bold uppercase tracking-wider md:text-4xl;
+  }
+  .section-title p {
+    @apply mt-2 text-sm font-medium uppercase text-primary;
+  }
+  
+  .typing-cursor {
+    animation: blink 1s step-end infinite;
   }
 
-  @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
-  }
-  .shimmer-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      90deg,
-      hsl(var(--primary) / 0.6),
-      hsl(var(--foreground)),
-      hsl(var(--primary) / 0.6),
-      hsl(var(--foreground))
-    );
-    background-size: 200% auto;
-    animation: shimmer 8s linear infinite;
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: hsl(var(--primary));
+    }
   }
 }

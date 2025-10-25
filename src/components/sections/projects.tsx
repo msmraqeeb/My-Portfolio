@@ -1,72 +1,78 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '@/lib/data';
+import { portfolio } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '../ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { cn } from '@/lib/utils';
+import { Card, CardContent } from '../ui/card';
 
 export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filters = useMemo(() => {
+    const allCategories = portfolio.map(item => item.category);
+    return ['All', ...Array.from(new Set(allCategories))];
+  }, []);
+
+  const filteredPortfolio = useMemo(() => {
+    if (activeFilter === 'All') {
+      return portfolio;
+    }
+    return portfolio.filter(item => item.category === activeFilter);
+  }, [activeFilter]);
+
   return (
-    <section id="projects">
-      <div className="container">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Featured Projects</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            A selection of my work. See something you like? Let's talk.
-          </p>
-        </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projects.map((project) => {
-            const projectImage = PlaceHolderImages.find((img) => img.id === project.image);
-            return (
-              <Card key={project.title} className="glass-card flex flex-col overflow-hidden group">
-                <div className="relative overflow-hidden">
-                  <Link href={project.link}>
-                    {projectImage && (
-                      <Image
-                        src={projectImage.imageUrl}
-                        alt={project.title}
-                        width={600}
-                        height={400}
-                        className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={projectImage.imageHint}
-                      />
-                    )}
-                  </Link>
+    <section id="portfolio">
+      <div className="section-title">
+        <p>Portfolio</p>
+        <h2>My Work</h2>
+      </div>
+
+      <div className="flex justify-center flex-wrap gap-2 mb-10">
+        {filters.map(filter => (
+          <Button
+            key={filter}
+            variant={activeFilter === filter ? 'default' : 'outline'}
+            onClick={() => setActiveFilter(filter)}
+            className={cn(
+                "rounded-full capitalize transition-all",
+                activeFilter === filter ? 'bg-primary text-primary-foreground' : 'bg-card'
+            )}
+          >
+            {filter}
+          </Button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredPortfolio.map((item) => {
+          const itemImage = PlaceHolderImages.find((img) => img.id === item.image);
+          return (
+            <Card key={item.title} className="group relative rounded-lg overflow-hidden border">
+              <Link href={item.link} target='_blank' className="block">
+                <div className="overflow-hidden">
+                  {itemImage && (
+                    <Image
+                      src={itemImage.imageUrl}
+                      alt={item.title}
+                      width={600}
+                      height={450}
+                      className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-110"
+                      data-ai-hint={itemImage.imageHint}
+                    />
+                  )}
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold font-headline">{project.title}</CardTitle>
-                  <CardDescription className="mt-2 text-base text-card-foreground/80">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant="link" className="p-0 h-auto text-primary-foreground">
-                    <Link href={project.link}>
-                      View Project <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            );
-          })}
-        </div>
+                <div className="p-4">
+                  <h3 className="font-bold text-lg">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.category}</p>
+                </div>
+              </Link>
+            </Card>
+          );
+        })}
       </div>
     </section>
   );

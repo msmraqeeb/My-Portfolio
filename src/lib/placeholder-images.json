@@ -3,32 +3,50 @@
     {
       "id": "profile-picture",
       "description": "A professional portrait of the user.",
-      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjEyNzg2MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
+      "imageUrl": "https://images.unsplash.com/photo-1686100510829-e5ba636736b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvZmZpY2UlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc2MTMwMjg1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office background"
+    },
+    {
+      "id": "about-picture",
+      "description": "A picture for the about me section.",
+      "imageUrl": "https://images.unsplash.com/photo-1561347981-969c80cf4463?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBjb2Rpbmd8ZW58MHx8fHwxNzYxMjk5MDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person coding"
     },
     {
       "id": "project-1",
       "description": "Screenshot of a modern web application dashboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1558655146-d09347e92766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3ZWIlMjBhcHB8ZW58MHx8fHwxNzYxMzY2NzQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "web app"
+      "imageUrl": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3ZWIlMjBkZXNpZ258ZW58MHx8fHwxNzYxMjk3MDk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web design"
     },
     {
       "id": "project-2",
       "description": "Mobile application interface design.",
-      "imageUrl": "https://images.unsplash.com/photo-1710993011836-108ba89ebe51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2JpbGUlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzYxMzcxMDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mobile interface"
+      "imageUrl": "https://images.unsplash.com/photo-1494253109108-2e30c049369b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnJhbmRpbmd8ZW58MHx8fHwxNzYxMzg0MDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "branding"
     },
     {
       "id": "project-3",
       "description": "Abstract data visualization graph.",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NjEzMDM3MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data visualization"
+      "imageUrl": "https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcHAlMjBkZXNpZ258ZW58MHx8fHwxNzYxMzI1NzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app design"
     },
     {
       "id": "project-4",
       "description": "E-commerce website product page.",
-      "imageUrl": "https://images.unsplash.com/photo-1657812159075-7f0abd98f7b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDB8fHx8MTc2MTI5Mjk5NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ecommerce website"
+      "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWIlMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3NjEzMTIwMjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web development"
+    },
+    {
+      "id": "project-5",
+      "description": "E-commerce website product page.",
+      "imageUrl": "https://images.unsplash.com/photo-1574717024239-25253f4ef40a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2aWRlbyUyMGVkaXRpbmd8ZW58MHx8fHwxNzYxMzQzMTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "video editing"
+    },
+    {
+      "id": "project-6",
+      "description": "E-commerce website product page.",
+      "imageUrl": "https://images.unsplash.com/photo-1600096194534-95cf5ece04cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzb2NpYWwlMjBtZWRpYXxlbnwwfHx8fDE3NjEzNTM5NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "social media"
     }
   ]
 }
