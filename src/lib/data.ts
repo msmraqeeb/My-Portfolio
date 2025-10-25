@@ -5,18 +5,17 @@ export const profile = {
   roles: ['Software Engineer', 'Web Developer', 'Social Media Specialist', 'Digital Marketer', 'Voice Artist'],
   bio: "I'm a passionate and creative full-stack developer, dedicated to building beautiful and functional web experiences. I can boost your business to the next success level through social media marketing. You can hire me for your voice artist in your advertisement. A whole package I can offer you.",
   image: 'profile-picture',
-  location: 'New York, USA',
+  location: 'Dhaka, Bangladesh',
   contact: {
-    email: 'shakil.mahmud@example.com',
+    email: 'msmraqeeb@gmail.com',
     phone: '+1 123 456 7890',
   },
   about: {
     description: "I am a passionate developer with a knack for creating elegant, efficient, and user-friendly digital experiences. With a strong foundation in both front-end and back-end technologies, I specialize in bringing ideas to life from concept to deployment. My goal is to always build products that provide pixel-perfect, performant experiences. By hiring me you can utilize my multi section skills so that your team will boost than before.",
     details: [
       { label: "Name", value: "Shakil Mahmud" },
-      { label: "Email", value: "shakil.mahmud@example.com" },
-      { label: "Age", value: "28" },
-      { label: "From", value: "New York, USA" },
+      { label: "Email", value: "msmraqeeb@gmail.com" },
+      { label: "From", value: "Dhaka, Bangladesh" },
     ]
   }
 };
