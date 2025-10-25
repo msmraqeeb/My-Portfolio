@@ -11,9 +11,9 @@ export default function Hero() {
 
   return (
     <section id="about" className="container">
-      <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <div className="lg:pl-20 lg:order-last">
-          <div className="relative animate-float max-w-xs px-2.5 lg:max-w-none">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="lg:order-last">
+          <div className="relative animate-float max-w-xs px-2.5 lg:max-w-none mx-auto">
              <Avatar className="h-64 w-64 md:h-80 md:w-80 border-4 border-primary/20 shadow-lg mx-auto">
                 {profileImage && (
                 <AvatarImage
@@ -27,7 +27,7 @@ export default function Hero() {
             <div className="absolute inset-0 h-full w-full bg-gradient-to-tr from-primary/30 to-accent/30 rounded-full blur-3xl -z-10"></div>
           </div>
         </div>
-        <div className="lg:order-first lg:row-span-2 text-center lg:text-left">
+        <div className="text-center lg:text-left">
           <h1 className="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-7xl font-headline shimmer-text">
             {profile.name}
           </h1>
