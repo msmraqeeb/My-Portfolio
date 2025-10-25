@@ -70,16 +70,16 @@ export const resume = {
   ],
   experience: [
     {
-      year: "2022 - Present",
-      title: "Sr. Full-Stack Developer",
-      institution: "Apple Inc.",
-      description: "Lead developer on customer-facing web platforms, focusing on performance, scalability, and user experience."
+      year: "Jan 2025 - Present",
+      title: "Head of Creative Lead",
+      institution: "Regnum Resource Ltd.",
+      description: "Lead the creative team focusing on performance, scalability and client satisfaction."
     },
     {
-      year: "2019 - 2022",
-      title: "Jr. Front-End Developer",
-      institution: "Google LLC",
-      description: "Worked on the UI/UX for various Google services, improving interactivity and accessibility."
+      year: "Mar 2024 - Dec 2024",
+      title: "RJ & News Anchor",
+      institution: "Capital FM 94.8",
+      description: "Hosted live radio programs and anchored news bulletins."
     }
   ]
 };
