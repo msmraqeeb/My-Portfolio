@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Alex Doe - Portfolio',
+  title: 'Shakil Mahmud - Portfolio',
   description: 'A professional, modern portfolio website to showcase your work and skills.',
 };
 

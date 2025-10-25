@@ -111,7 +111,7 @@ export default function Header() {
                 </Button>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Alex Doe</p>
+            <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Shakil Mahmud</p>
         </div>
       </header>
 
@@ -119,7 +119,7 @@ export default function Header() {
       <header className="lg:hidden sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="text-xl font-bold text-primary">
-            Alex Doe
+            Shakil Mahmud
           </Link>
           <div className="flex items-center gap-2">
             <Button
