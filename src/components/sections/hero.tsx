@@ -59,13 +59,13 @@ export default function Hero() {
             </div>
              <div className="order-1 md:order-2 flex justify-center">
                 {profileImage && (
-                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                  <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
                     <Image
                         src={profileImage.imageUrl}
                         alt={profile.name}
-                        width={384}
-                        height={384}
-                        className="rounded-full object-cover border-8 border-primary/20 shadow-xl"
+                        width={320}
+                        height={320}
+                        className="rounded-3xl object-cover border-8 border-primary/20 shadow-xl"
                         priority
                         data-ai-hint={profileImage.imageHint}
                     />
