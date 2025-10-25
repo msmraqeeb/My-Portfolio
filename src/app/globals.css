@@ -6,7 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71% 4%;
-    --card: 0 0% 100%;
+    --card: 0 0% 90%;
     --card-foreground: 224 71% 4%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71% 4%;
@@ -27,24 +27,24 @@
   }
  
   .dark {
-    --background: 0 0% 13%;
+    --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 20%;
+    --card: 240 10% 10%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 13%;
+    --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 225 41% 70%;
     --primary-foreground: 222 47% 11%;
-    --secondary: 0 0% 20%;
+    --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 20%;
+    --muted: 240 3.7% 15.9%;
     --muted-foreground: 0 0% 65%;
-    --accent: 0 0% 20%;
+    --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 28%;
-    --input: 0 0% 28%;
+    --border: 240 3.7% 20%;
+    --input: 240 3.7% 20%;
     --ring: 225 41% 70%;
   }
 }
@@ -58,5 +58,19 @@
   }
   section {
     @apply w-full py-12 md:py-24 lg:py-32;
+  }
+
+  .glass-card {
+      @apply bg-card/60 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 }

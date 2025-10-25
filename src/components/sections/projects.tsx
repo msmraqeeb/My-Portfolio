@@ -28,7 +28,7 @@ export default function Projects() {
           {projects.map((project) => {
             const projectImage = PlaceHolderImages.find((img) => img.id === project.image);
             return (
-              <Card key={project.title} className="flex flex-col overflow-hidden group">
+              <Card key={project.title} className="glass-card flex flex-col overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <Link href={project.link}>
                     {projectImage && (
@@ -45,7 +45,7 @@ export default function Projects() {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold font-headline">{project.title}</CardTitle>
-                  <CardDescription className="mt-2 text-base">{project.description}</CardDescription>
+                  <CardDescription className="mt-2 text-base text-card-foreground/80">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <div className="flex flex-wrap gap-2">
@@ -57,7 +57,7 @@ export default function Projects() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button asChild variant="link" className="p-0 h-auto">
+                  <Button asChild variant="link" className="p-0 h-auto text-primary-foreground">
                     <Link href={project.link}>
                       View Project <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

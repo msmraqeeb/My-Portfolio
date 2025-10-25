@@ -12,16 +12,20 @@ export default function Hero() {
     <section id="about" className="container">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-3 items-center">
         <div className="flex justify-center md:order-last">
-          <Avatar className="h-48 w-48 md:h-64 md:w-64 border-4 border-primary/10 shadow-lg">
-            {profileImage && (
-              <AvatarImage
-                src={profileImage.imageUrl}
-                alt={profile.name}
-                data-ai-hint={profileImage.imageHint}
-              />
-            )}
-            <AvatarFallback>{profile.name.substring(0, 2)}</AvatarFallback>
-          </Avatar>
+          <div className="relative animate-float">
+             <Avatar className="h-48 w-48 md:h-64 md:w-64 border-4 border-primary/10 shadow-lg">
+                {profileImage && (
+                <AvatarImage
+                    src={profileImage.imageUrl}
+                    alt={profile.name}
+                    data-ai-hint={profileImage.imageHint}
+                />
+                )}
+                <AvatarFallback>{profile.name.substring(0, 2)}</AvatarFallback>
+            </Avatar>
+            <div className="absolute -bottom-4 -right-4 h-16 w-16 bg-primary/20 rounded-full blur-xl -z-10 animate-pulse"></div>
+            <div className="absolute -top-4 -left-4 h-16 w-16 bg-accent/20 rounded-full blur-xl -z-10 animate-pulse delay-2000"></div>
+          </div>
         </div>
         <div className="col-span-2 text-center md:text-left">
           <span className="text-primary font-semibold">Hello, I'm</span>
