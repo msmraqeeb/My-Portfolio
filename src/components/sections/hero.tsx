@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
             <div className="order-2 md:order-2 text-center md:text-left">
                 <span className="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                  UI/UX Designer
+                  Software Engineer
                 </span>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight flex items-center gap-4 justify-center md:justify-start">
                   Hello! <Hand className="h-10 w-10 text-yellow-400 rotate-[20deg]" /> I Am

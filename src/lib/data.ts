@@ -2,7 +2,7 @@ import { CodeXml, Component, Layout, BarChart, Sun, Cloud, Palette, BrainCircuit
 
 export const profile = {
   name: 'Alex Doe',
-  roles: ['Developer', 'Designer', 'Freelancer'],
+  roles: ['Software Engineer', 'Web Developer', 'Social Media Specialist', 'Digital Marketer', 'Voice Artist'],
   bio: "I'm a passionate and creative full-stack developer, dedicated to building beautiful and functional web experiences.",
   image: 'profile-picture',
   location: 'New York, USA',
