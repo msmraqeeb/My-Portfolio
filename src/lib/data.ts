@@ -3,7 +3,7 @@ import { CodeXml, Component, Layout, BarChart, Sun, Cloud, Palette, BrainCircuit
 export const profile = {
   name: 'Shakil Mahmud',
   roles: ['Software Engineer', 'Web Developer', 'Social Media Specialist', 'Digital Marketer', 'Voice Artist'],
-  bio: "I'm a passionate and creative full-stack developer, dedicated to building beautiful and functional web experiences.",
+  bio: "I'm a passionate and creative full-stack developer, dedicated to building beautiful and functional web experiences. I can boost your business to the next success level through social media marketing. You can hire me for your voice artist in your advertisement. A whole package I can offer you.",
   image: 'profile-picture',
   location: 'New York, USA',
   contact: {
