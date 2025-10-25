@@ -15,7 +15,7 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
         <div className="lg:col-span-2">
           <h3 className="text-2xl font-bold mb-4">
-            I'm <span className="text-primary">{profile.name}</span>, a {profile.roles[0]}
+            I'm <span className="text-primary">{profile.name}</span>, a Living Creative Leader
           </h3>
           <p className="text-muted-foreground mb-6 text-lg">
             {profile.about.description}
