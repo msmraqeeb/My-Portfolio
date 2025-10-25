@@ -56,16 +56,16 @@ export const services = [
 export const resume = {
   education: [
     {
-      year: "2018 - 2022",
-      title: "Master in Computer Science",
-      institution: "Harvard University",
-      description: "Focused on advanced algorithms, machine learning, and system design. Graduated with top honors."
+      year: "2009 - 2012",
+      title: "B.Sc. in Computer Science & Engineering",
+      institution: "Stamford University",
+      description: "Focused on web design and software development. Gathered skills on social medias."
     },
     {
-      year: "2014 - 2018",
-      title: "Bachelor of Science in Computer Science",
-      institution: "Stanford University",
-      description: "Specialized in software engineering principles, database management, and web technologies."
+      year: "2007 - 2008",
+      title: "H.S.C",
+      institution: "Notre Dame College",
+      description: "Specialized in science projects and acheived a top result."
     }
   ],
   experience: [
