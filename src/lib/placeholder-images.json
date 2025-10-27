@@ -25,24 +25,6 @@
       "imageHint": "branding"
     },
     {
-      "id": "project-3",
-      "description": "Abstract data visualization graph.",
-      "imageUrl": "https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcHAlMjBkZXNpZ258ZW58MHx8fHwxNzYxMzI1NzcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "app design"
-    },
-    {
-      "id": "project-4",
-      "description": "E-commerce website product page.",
-      "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWIlMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3NjEzMTIwMjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "web development"
-    },
-    {
-      "id": "project-5",
-      "description": "E-commerce website product page.",
-      "imageUrl": "https://images.unsplash.com/photo-1574717024239-25253f4ef40a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2aWRlbyUyMGVkaXRpbmd8ZW58MHx8fHwxNzYxMzQzMTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "video editing"
-    },
-    {
       "id": "project-6",
       "description": "E-commerce website product page.",
       "imageUrl": "https://i.postimg.cc/htSdWtF5/Social-Media-Content.jpg",

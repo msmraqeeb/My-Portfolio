@@ -99,24 +99,6 @@ export const portfolio = [
     link: '#',
   },
   {
-    title: 'Mobile App UI/UX',
-    category: 'App Design',
-    image: 'project-3',
-    link: '#',
-  },
-  {
-    title: 'E-commerce Platform',
-    category: 'Web Development',
-    image: 'project-4',
-    link: '#',
-  },
-    {
-    title: 'Promotional Video',
-    category: 'Video Editing',
-    image: 'project-5',
-    link: '#',
-  },
-    {
     title: 'Social Media Content',
     category: 'Branding',
     image: 'project-6',
