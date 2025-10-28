@@ -29,6 +29,12 @@
       "description": "E-commerce website product page.",
       "imageUrl": "https://i.postimg.cc/htSdWtF5/Social-Media-Content.jpg",
       "imageHint": "social media"
+    },
+    {
+      "id": "your-website-image",
+      "description": "A placeholder for a new website project.",
+      "imageUrl": "/images/your-image-name.png",
+      "imageHint": "website mockup"
     }
   ]
 }
