@@ -1,3 +1,4 @@
+
 import { PanelsTopLeft, CodeXml, ChartNoAxesColumnIncreasing, Megaphone, Paintbrush, Tv } from 'lucide-react';
 
 export const profile = {
@@ -93,10 +94,10 @@ export const portfolio = [
     link: 'https://liveinlakewood.ca/',
   },
   {
-    title: 'Websites',
+    title: 'InVEST USA',
     category: 'Web Design',
-    image: 'project-1',
-    link: 'https://www.regumresourceltd.com',
+    image: 'project-investusa',
+    link: 'https://investusa.org/',
   },
   {
     title: 'Marketing Campaign',

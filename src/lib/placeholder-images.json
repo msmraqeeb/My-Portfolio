@@ -19,10 +19,10 @@
       "imageHint": "real estate"
     },
     {
-      "id": "project-1",
-      "description": "Screenshot of a modern web application dashboard.",
-      "imageUrl": "/images/all-devices-black-3.png",
-      "imageHint": "website mockup"
+      "id": "project-investusa",
+      "description": "Screenshot of InVEST USA website.",
+      "imageUrl": "/images/investusa.jpg",
+      "imageHint": "investment website"
     },
     {
       "id": "project-2",
