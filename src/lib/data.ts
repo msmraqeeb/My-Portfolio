@@ -1,4 +1,4 @@
-import { CodeXml, Component, Layout, BarChart, Sun, Cloud, Palette, BrainCircuit, PenTool, Tv, Megaphone, Paintbrush } from 'lucide-react';
+import { CodeXml, Component, PanelsTopLeft, ChartNoAxesColumnIncreasing, Sun, Cloud, Palette, BrainCircuit, PenTool, Tv, Megaphone, Paintbrush } from 'lucide-react';
 
 export const profile = {
   name: 'Shakil Mahmud',
@@ -22,7 +22,7 @@ export const profile = {
 
 export const services = [
     {
-        icon: Layout,
+        icon: PanelsTopLeft,
         title: "Web Design",
         description: "Crafting visually stunning and user-friendly website designs that leave a lasting impression."
     },
@@ -32,7 +32,7 @@ export const services = [
         description: "Building robust, scalable, and high-performance websites using modern technologies."
     },
     {
-        icon: BarChart,
+        icon: ChartNoAxesColumnIncreasing,
         title: "Business Analysis",
         description: "Analyzing business needs and providing data-driven insights to improve processes and strategies."
     },
