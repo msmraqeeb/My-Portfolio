@@ -13,6 +13,12 @@
       "imageHint": "person coding"
     },
     {
+      "id": "project-lakewood",
+      "description": "Screenshot of Lakewood Of Strathmore website.",
+      "imageUrl": "/images/liveinlakewood.jpg",
+      "imageHint": "real estate"
+    },
+    {
       "id": "project-1",
       "description": "Screenshot of a modern web application dashboard.",
       "imageUrl": "/images/all-devices-black-3.png",

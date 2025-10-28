@@ -1,4 +1,4 @@
-import { CodeXml, Component, PanelsTopLeft, ChartNoAxesColumnIncreasing, Sun, Cloud, Palette, BrainCircuit, PenTool, Tv, Megaphone, Paintbrush } from 'lucide-react';
+import { PanelsTopLeft, CodeXml, ChartNoAxesColumnIncreasing, Megaphone, Paintbrush, Tv } from 'lucide-react';
 
 export const profile = {
   name: 'Shakil Mahmud',
@@ -86,6 +86,12 @@ export const resume = {
 
 
 export const portfolio = [
+  {
+    title: 'Lakewood Of Strathmore',
+    category: 'Web Design',
+    image: 'project-lakewood',
+    link: 'https://liveinlakewood.ca/',
+  },
   {
     title: 'Websites',
     category: 'Web Design',
