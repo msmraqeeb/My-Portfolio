@@ -87,7 +87,7 @@ export const resume = {
 
 export const portfolio = [
   {
-    title: 'Corporate Website',
+    title: 'Websites',
     category: 'Web Design',
     image: 'project-1',
     link: '#',
