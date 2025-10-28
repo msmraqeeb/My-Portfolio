@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Twitter } from 'lucide-react';
+import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Twitter, Globe } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
@@ -15,6 +15,7 @@ const navLinks = [
   { href: '#services', label: 'Services', icon: Code },
   { href: '#resume', label: 'Resume', icon: Award },
   { href: '#portfolio', label: 'Portfolio', icon: Briefcase },
+  { href: '/websites', label: 'Websites', icon: Globe },
   { href: '#contact', label: 'Contact', icon: Mail },
 ];
 
@@ -42,7 +43,10 @@ export default function Header() {
       }
       // Check if scrolled to the bottom
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
-        currentSection = 'contact';
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            currentSection = 'contact';
+        }
       }
       
       setActiveSection(currentSection);
@@ -62,19 +66,22 @@ export default function Header() {
       </div>
 
       <nav className="flex flex-col items-start gap-4 px-4">
-        {navLinks.map((link) => (
-          <Link
-            key={link.label}
-            href={link.href}
-            className={cn(
-              'flex items-center gap-3 text-lg font-medium transition-colors hover:text-primary w-full p-2 rounded-md',
-              activeSection === link.href.substring(1) ? 'text-primary bg-primary/10' : 'text-muted-foreground'
-            )}
-          >
-            <link.icon className="h-5 w-5" />
-            <span>{link.label}</span>
-          </Link>
-        ))}
+        {navLinks.map((link) => {
+            const isActive = activeSection === link.href.substring(1) || (link.href.startsWith('/') && activeSection === link.href.substring(1));
+            return (
+                <Link
+                    key={link.label}
+                    href={link.href}
+                    className={cn(
+                    'flex items-center gap-3 text-lg font-medium transition-colors hover:text-primary w-full p-2 rounded-md',
+                    isActive ? 'text-primary bg-primary/10' : 'text-muted-foreground'
+                    )}
+                >
+                    <link.icon className="h-5 w-5" />
+                    <span>{link.label}</span>
+                </Link>
+            )
+        })}
       </nav>
       
       { isMobile && <div className="p-4 mt-8 border-t border-border">

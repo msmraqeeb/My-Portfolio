@@ -90,7 +90,7 @@ export const portfolio = [
     title: 'Websites',
     category: 'Web Design',
     image: 'project-1',
-    link: '#',
+    link: 'https://www.regumresourceltd.com',
   },
   {
     title: 'Marketing Campaign',
