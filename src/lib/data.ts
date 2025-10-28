@@ -103,11 +103,5 @@ export const portfolio = [
     category: 'Branding',
     image: 'project-6',
     link: '#',
-  },
-  {
-    title: 'Your Next Website',
-    category: 'Web Design',
-    image: 'your-website-image',
-    link: 'https://example.com',
   }
 ];
