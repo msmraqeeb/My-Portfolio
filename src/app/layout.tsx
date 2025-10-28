@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="!scroll-smooth">
-      <body className={cn(poppins.variable, 'font-body antialiased bg-background lg:pl-72')}>
+      <body className={cn(poppins.variable, 'font-body antialiased bg-background lg:pl-72')} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           <main className="flex-1">{children}</main>
