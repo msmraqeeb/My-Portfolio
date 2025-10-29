@@ -63,7 +63,7 @@ export const resume = {
       description: "Focused on web design and software development, with a curriculum covering data structures, algorithms, and database management. Gathered practical skills on social media integration and digital marketing strategies through various projects."
     },
     {
-      year: "2007 - 2008",
+      year: "2006 - 2008",
       title: "Higher Secondary Certificate (H.S.C)",
       institution: "Notre Dame College",
       description: "Completed my higher secondary education with a focus on science. Specialized in various science projects and achieved a top result in the board examinations."
