@@ -31,6 +31,12 @@
       "imageHint": "shipping website"
     },
     {
+      "id": "project-heckya",
+      "description": "Screenshot of Heckya website.",
+      "imageUrl": "/images/heckya.jpg",
+      "imageHint": "website mockup"
+    },
+    {
       "id": "project-2",
       "description": "Mobile application interface design.",
       "imageUrl": "/images/marketing-campaign.jpg",

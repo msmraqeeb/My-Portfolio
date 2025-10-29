@@ -106,6 +106,12 @@ export const portfolio = [
     link: 'https://ishipinc.com/',
   },
   {
+    title: 'Heckya',
+    category: 'Web Design',
+    image: 'project-heckya',
+    link: 'https://heckya.ca/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',
