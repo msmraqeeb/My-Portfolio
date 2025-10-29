@@ -81,7 +81,7 @@ export default function Header() {
 
       <nav className={cn(
           "flex items-center gap-2",
-          isMobile ? "flex-col" : "flex-col"
+          isMobile ? "flex-col" : "flex-row"
       )}>
         {navLinks.map((link) => {
             const isActive = activeSection === (link.href.startsWith('#') ? link.href.substring(1) : '');
@@ -126,7 +126,7 @@ export default function Header() {
   return (
     <>
        <header className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block">
-        <div className="glass-card p-4 rounded-full">
+        <div className="glass-card p-2 rounded-full">
             <NavContent />
         </div>
       </header>
