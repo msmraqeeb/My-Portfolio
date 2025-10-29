@@ -136,6 +136,12 @@ export const portfolio = [
     link: 'https://oneflowerae.com/',
   },
   {
+    title: 'Asayel Birds & Fish Aquariums',
+    category: 'Web Design',
+    image: 'project-asayel',
+    link: 'https://asayel.site/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',

@@ -61,6 +61,12 @@
       "imageHint": "flower website"
     },
     {
+      "id": "project-asayel",
+      "description": "Screenshot of Asayel Birds & Fish Aquariums website.",
+      "imageUrl": "/images/Asayel.jpg",
+      "imageHint": "pet website"
+    },
+    {
       "id": "project-2",
       "description": "Mobile application interface design.",
       "imageUrl": "/images/marketing-campaign.jpg",
