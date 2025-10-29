@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Facebook, Globe } from 'lucide-react';
+import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Facebook } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from './ui/sheet';
@@ -15,7 +15,6 @@ const navLinks = [
   { href: '#services', label: 'Services', icon: Code },
   { href: '#resume', label: 'Resume', icon: Award },
   { href: '#portfolio', label: 'Portfolio', icon: Briefcase },
-  { href: '/websites', label: 'Websites', icon: Globe },
   { href: '#contact', label: 'Contact', icon: Mail },
 ];
 
