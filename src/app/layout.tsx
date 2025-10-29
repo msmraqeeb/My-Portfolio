@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/header';
 import { cn } from '@/lib/utils';
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = Poppins({ 
   subsets: ['latin'], 
@@ -30,6 +31,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Toaster />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
