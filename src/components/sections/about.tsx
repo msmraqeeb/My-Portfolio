@@ -27,7 +27,7 @@ export default function About() {
             </div>
           ))}
           <Button asChild size="lg" className="rounded-full w-full mt-6">
-            <a href="/shakil-mahmud-cv.pdf" download>Download CV</a>
+            <a href="/home/user/studio/Shakil-Mahmud-CV.pdf" download>Download CV</a>
           </Button>
         </div>
       </div>
