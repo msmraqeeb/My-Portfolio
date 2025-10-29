@@ -28,8 +28,11 @@ const socialLinks = [
 export default function Header() {
   const { theme, setTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('home');
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+
     const handleScroll = () => {
       const sections = navLinks
         .map(link => (link.href.startsWith('#') ? document.getElementById(link.href.substring(1)) : null))
@@ -65,6 +68,10 @@ export default function Header() {
     handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  if (!isMounted) {
+    return null;
+  }
   
   const NavContent = ({isMobile = false}) => (
     <>
@@ -74,27 +81,31 @@ export default function Header() {
         </Link>
       </div>}
 
-      <nav className="flex flex-col items-center gap-4 px-2">
+      <nav className={cn(
+          "flex items-end gap-2 px-2",
+          isMobile ? "flex-col items-center" : "flex-row"
+      )}>
         {navLinks.map((link) => {
             const isActive = activeSection === (link.href.startsWith('#') ? link.href.substring(1) : new URL(link.href, 'http://localhost').pathname.substring(1));
             return (
-                <Button 
-                    asChild 
-                    variant={isActive ? 'default' : 'ghost'} 
-                    className={cn(
-                        "rounded-full transition-all duration-300 ease-in-out flex items-center justify-center",
-                        isActive ? 'w-32' : 'w-12 h-12',
-                        !isMobile && 'hover:bg-primary/10'
-                    )}
-                    key={link.label}>
-                    <Link
-                        href={link.href}
-                        title={link.label}
-                    >
-                        <link.icon className={cn("h-6 w-6 transition-all", { "mr-2": isActive })} />
-                        {isActive && <span>{link.label}</span>}
-                    </Link>
-                </Button>
+                <div key={link.label} className="flex flex-col items-center gap-1">
+                    <Button 
+                        asChild 
+                        variant='ghost'
+                        className="rounded-lg w-14 h-14 bg-card/50 backdrop-blur-sm border border-border/20 hover:bg-primary/20 transition-all duration-300 ease-in-out transform hover:-translate-y-2"
+                        >
+                        <Link
+                            href={link.href}
+                            title={link.label}
+                        >
+                            <link.icon className="h-7 w-7" />
+                        </Link>
+                    </Button>
+                    <div className={cn(
+                        "h-1.5 w-1.5 rounded-full bg-primary transition-opacity duration-300",
+                        isActive ? "opacity-100" : "opacity-0"
+                    )}></div>
+                </div>
             )
         })}
       </nav>
@@ -118,8 +129,8 @@ export default function Header() {
   return (
     <>
       {/* Desktop Floating Nav */}
-       <header className="fixed top-1/2 right-6 transform -translate-y-1/2 z-50 hidden lg:block">
-        <div className="bg-card/50 backdrop-blur-sm border border-border p-3 rounded-full">
+       <header className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block">
+        <div className="glass-card px-4 py-3">
             <NavContent />
         </div>
       </header>
