@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Facebook } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -74,7 +73,7 @@ export default function Header() {
   const NavContent = ({isMobile = false}) => (
     <>
       {isMobile && <div className={cn("text-center mb-8")}>
-        <Link href="/" className="inline-block text-2xl font-bold text-primary">
+        <Link href="/" className="inline-block text-lg font-bold text-primary">
           {profile.name}
         </Link>
       </div>}
@@ -86,7 +85,7 @@ export default function Header() {
         {navLinks.map((link) => {
             const isActive = activeSection === (link.href.startsWith('#') ? link.href.substring(1) : '');
             return (
-                <div key={link.label} className="flex flex-col items-center gap-1">
+                <div key={link.label} className="relative flex flex-col items-center gap-1">
                     <Button 
                         asChild 
                         variant='ghost'
@@ -99,9 +98,10 @@ export default function Header() {
                             href={link.href}
                             title={link.label}
                         >
-                            <link.icon className="h-6 w-6" />
+                            <link.icon className="h-5 w-5" />
                         </Link>
                     </Button>
+                     {isActive && !isMobile && <div className="absolute -bottom-2 w-1.5 h-1.5 bg-primary rounded-full"></div>}
                 </div>
             )
         })}
@@ -112,7 +112,7 @@ export default function Header() {
             {socialLinks.map((social) => (
               <Button key={social.name} variant="outline" size="icon" className="rounded-full" asChild>
                 <Link href={social.url} target="_blank" rel="noopener noreferrer">
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className="h-4 w-4" />
                   <span className="sr-only">{social.name}</span>
                 </Link>
               </Button>
@@ -125,6 +125,19 @@ export default function Header() {
 
   return (
     <>
+      <div className="fixed top-4 right-4 z-50 hidden lg:block">
+        <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="rounded-full w-12 h-12 bg-card/60 backdrop-blur-xl border border-white/10"
+        >
+            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <span className="sr-only">Toggle theme</span>
+        </Button>
+      </div>
+
        <header className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block">
         <div className="glass-card p-2 rounded-full">
             <NavContent />
@@ -132,8 +145,8 @@ export default function Header() {
       </header>
 
       <header className="lg:hidden sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-primary">
+        <div className="container flex h-14 items-center justify-between">
+          <Link href="/" className="text-lg font-bold text-primary">
             Shakil Mahmud
           </Link>
           <div className="flex items-center gap-2">
@@ -149,15 +162,15 @@ export default function Header() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[280px] bg-card p-0">
                   <SheetHeader className="p-4 border-b">
-                     <SheetTitle className="text-left text-lg font-semibold">Menu</SheetTitle>
+                     <SheetTitle className="sr-only">Menu</SheetTitle>
                      <SheetClose asChild>
                         <Button variant="ghost" size="icon" className="absolute right-2 top-2">
-                           <X className="h-6 w-6" />
+                           <X className="h-5 w-5" />
                         </Button>
                      </SheetClose>
                   </SheetHeader>
