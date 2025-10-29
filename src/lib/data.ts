@@ -64,9 +64,15 @@ export const resume = {
     },
     {
       year: "2007 - 2008",
-      title: "Higer Secondary Certificate (H.S.C)",
+      title: "Higher Secondary Certificate (H.S.C)",
       institution: "Notre Dame College",
       description: "Completed my higher secondary education with a focus on science. Specialized in various science projects and achieved a top result in the board examinations."
+    },
+    {
+      year: "2005 - 2006",
+      title: "Secondary School Certificate (S.S.C)",
+      institution: "Motijheel Model School & College",
+      description: "Completed secondary education with a concentration in the science group, building a strong foundation in physics, chemistry, and mathematics."
     }
   ],
   experience: [
