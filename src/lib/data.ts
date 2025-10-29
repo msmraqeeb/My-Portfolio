@@ -80,7 +80,7 @@ export const resume = {
       year: "Jan 2025 - Present",
       title: "Head of Creative Lead",
       institution: "Regnum Resource Ltd.",
-      description: "Lead the creative team focusing on performance, scalability and client satisfaction."
+      description: "Directed and managed the overall creative vision and output across all digital, print, and broadcast media. Lead brainstorming sessions and creative strategy meetings to develop original content ideas aligned with brand and business goals. Supervised the creation of video, audio, graphic, and written content for marketing campaigns, social media, and e-commerce platforms."
     },
     {
       year: "Mar 2024 - Dec 2024",
