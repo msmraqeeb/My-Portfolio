@@ -65,21 +65,22 @@ export default function Header() {
         </Link>
       </div>
 
-      <nav className="flex flex-col items-start gap-4 px-4">
+      <nav className="flex flex-col items-center gap-4 px-4">
         {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1) || (link.href.startsWith('/') && activeSection === link.href.substring(1));
             return (
-                <Link
-                    key={link.label}
-                    href={link.href}
-                    className={cn(
-                    'flex items-center gap-3 text-lg font-medium transition-colors hover:text-primary w-full p-2 rounded-md',
-                    isActive ? 'text-primary bg-primary/10' : 'text-muted-foreground'
-                    )}
-                >
-                    <link.icon className="h-5 w-5" />
-                    <span>{link.label}</span>
-                </Link>
+                <Button asChild variant={isActive ? 'secondary' : 'ghost'} size="icon" className="rounded-full h-12 w-12" key={link.label}>
+                    <Link
+                        href={link.href}
+                        title={link.label}
+                        className={cn(
+                        'flex items-center justify-center text-lg font-medium transition-colors hover:text-primary',
+                        isActive ? 'text-primary' : 'text-muted-foreground'
+                        )}
+                    >
+                        <link.icon className="h-6 w-6" />
+                    </Link>
+                </Button>
             )
         })}
       </nav>
