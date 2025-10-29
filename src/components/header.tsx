@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Twitter, Globe } from 'lucide-react';
+import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Facebook, Globe } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from './ui/sheet';
@@ -20,9 +20,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, url: 'https://github.com' },
-  { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com' },
-  { name: 'Twitter', icon: Twitter, url: 'https://twitter.com' },
+  { name: 'GitHub', icon: Github, url: 'https://github.com/msmraqeeb' },
+  { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/msmraqeeb/' },
+  { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/shakilmahmud.rj/' },
 ];
 
 export default function Header() {
@@ -145,14 +145,14 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[280px] bg-card p-0">
-                  <SheetHeader>
+                  <SheetHeader className="p-4">
                     <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
-                    <div className="p-4 flex justify-end">
-                      <SheetClose asChild>
-                        <Button variant="ghost" size="icon">
-                            <X className="h-6 w-6" />
-                        </Button>
-                      </SheetClose>
+                    <div className="flex justify-end">
+                        <SheetClose asChild>
+                            <Button variant="ghost" size="icon">
+                                <X className="h-6 w-6" />
+                            </Button>
+                        </SheetClose>
                     </div>
                   </SheetHeader>
                   <NavContent isMobile={true} />

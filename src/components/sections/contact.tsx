@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { handleContactFormSubmission } from '@/actions/contact';
-import { Loader2, Mail, MapPin, Phone, Github, Twitter, Linkedin } from 'lucide-react';
+import { Loader2, Mail, MapPin, Phone, Github, Linkedin, Facebook } from 'lucide-react';
 import React from 'react';
 import { profile } from '@/lib/data';
 import Link from 'next/link';
@@ -21,9 +21,9 @@ const formSchema = z.object({
 });
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, url: 'https://github.com' },
-  { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com' },
-  { name: 'Twitter', icon: Twitter, url: 'https://twitter.com' },
+  { name: 'GitHub', icon: Github, url: 'https://github.com/msmraqeeb' },
+  { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/msmraqeeb/' },
+  { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/shakilmahmud.rj/' },
 ];
 
 export default function Contact() {
