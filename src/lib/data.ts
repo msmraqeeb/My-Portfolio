@@ -130,6 +130,12 @@ export const portfolio = [
     link: 'https://paxpro.eu/',
   },
   {
+    title: 'One Flower AE',
+    category: 'Web Design',
+    image: 'project-oneflower',
+    link: 'https://oneflowerae.com/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',
