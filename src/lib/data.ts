@@ -142,6 +142,12 @@ export const portfolio = [
     link: 'https://asayel.site/',
   },
   {
+    title: 'A Reflection Within',
+    category: 'Web Design',
+    image: 'project-areflectionwithin',
+    link: 'https://areflectionwithin.com/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',

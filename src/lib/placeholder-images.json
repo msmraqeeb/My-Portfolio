@@ -67,6 +67,12 @@
       "imageHint": "pet website"
     },
     {
+      "id": "project-areflectionwithin",
+      "description": "Screenshot of A Reflection Within website.",
+      "imageUrl": "/images/A-Reflection-Within.jpg",
+      "imageHint": "wellness website"
+    },
+    {
       "id": "project-2",
       "description": "Mobile application interface design.",
       "imageUrl": "/images/marketing-campaign.jpg",
