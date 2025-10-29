@@ -52,7 +52,6 @@ export default function Header() {
         currentSection = 'home';
       }
 
-      // Check if scrolled to the bottom
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 20) {
         const contactSection = document.getElementById('contact');
         if (contactSection) {
@@ -64,7 +63,7 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -81,29 +80,28 @@ export default function Header() {
       </div>}
 
       <nav className={cn(
-          "flex items-end gap-2 px-2",
-          isMobile ? "flex-col items-center" : "flex-row"
+          "flex items-center gap-2",
+          isMobile ? "flex-col" : "flex-col"
       )}>
         {navLinks.map((link) => {
-            const isActive = activeSection === (link.href.startsWith('#') ? link.href.substring(1) : new URL(link.href, 'http://localhost').pathname.substring(1));
+            const isActive = activeSection === (link.href.startsWith('#') ? link.href.substring(1) : '');
             return (
                 <div key={link.label} className="flex flex-col items-center gap-1">
                     <Button 
                         asChild 
                         variant='ghost'
-                        className="rounded-lg w-14 h-14 bg-card/50 backdrop-blur-sm border border-border/20 hover:bg-primary/20 transition-all duration-300 ease-in-out transform hover:-translate-y-2"
-                        >
+                        className={cn(
+                            "relative w-12 h-12 rounded-full transition-all duration-300 ease-in-out",
+                            isActive ? "bg-primary text-primary-foreground" : "bg-transparent hover:bg-primary/20",
+                        )}
+                    >
                         <Link
                             href={link.href}
                             title={link.label}
                         >
-                            <link.icon className="h-7 w-7" />
+                            <link.icon className="h-6 w-6" />
                         </Link>
                     </Button>
-                    <div className={cn(
-                        "h-1.5 w-1.5 rounded-full bg-primary transition-opacity duration-300",
-                        isActive ? "opacity-100" : "opacity-0"
-                    )}></div>
                 </div>
             )
         })}
@@ -127,14 +125,12 @@ export default function Header() {
 
   return (
     <>
-      {/* Desktop Floating Nav */}
        <header className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block">
-        <div className="glass-card px-4 py-3">
+        <div className="glass-card p-4 rounded-full">
             <NavContent />
         </div>
       </header>
 
-      {/* Mobile Header */}
       <header className="lg:hidden sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="text-xl font-bold text-primary">
