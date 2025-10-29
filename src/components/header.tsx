@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Twitter, Globe } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from './ui/sheet';
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { profile } from '@/lib/data';
@@ -145,13 +145,16 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[280px] bg-card p-0">
-                  <div className="p-4 flex justify-end">
-                    <SheetClose asChild>
-                       <Button variant="ghost" size="icon">
-                          <X className="h-6 w-6" />
-                       </Button>
-                    </SheetClose>
-                  </div>
+                  <SheetHeader>
+                    <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
+                    <div className="p-4 flex justify-end">
+                      <SheetClose asChild>
+                        <Button variant="ghost" size="icon">
+                            <X className="h-6 w-6" />
+                        </Button>
+                      </SheetClose>
+                    </div>
+                  </SheetHeader>
                   <NavContent isMobile={true} />
               </SheetContent>
             </Sheet>
