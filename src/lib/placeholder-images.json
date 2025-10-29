@@ -37,6 +37,12 @@
       "imageHint": "website mockup"
     },
     {
+      "id": "project-kidsparadise",
+      "description": "Screenshot of Kids Paradise website.",
+      "imageUrl": "/images/kidspardise.jpg",
+      "imageHint": "kids website"
+    },
+    {
       "id": "project-2",
       "description": "Mobile application interface design.",
       "imageUrl": "/images/marketing-campaign.jpg",

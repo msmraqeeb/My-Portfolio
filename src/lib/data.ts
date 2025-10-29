@@ -112,6 +112,12 @@ export const portfolio = [
     link: 'https://heckya.ca/',
   },
   {
+    title: 'Kids Pardise',
+    category: 'Web Design',
+    image: 'project-kidsparadise',
+    link: 'https://kidsparadise.com.bd/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',
