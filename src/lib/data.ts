@@ -90,7 +90,11 @@ export const resume = {
       year: "Mar 2024 - Dec 2024",
       title: "RJ & News Anchor",
       institution: "Capital FM 94.8",
-      description: "Hosted live radio programs and anchored news bulletins."
+      description: [
+          "Hosted live radio programs with engaging on-air presence, delivering music, talk segments, and audience interactions in a dynamic and professional manner.",
+          "Anchored news bulletins, breaking news updates, and special reports with clarity, accuracy, and journalistic integrity.",
+          "Researched, scripted, and presented current affairs, feature stories, and special segments tailored to target audiences."
+      ]
     }
   ]
 };
