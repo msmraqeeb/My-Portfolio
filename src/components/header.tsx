@@ -125,7 +125,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed top-4 right-4 z-50 hidden lg:block">
+      <div className="fixed bottom-4 right-4 z-50 hidden lg:block">
         <Button
             variant="ghost"
             size="icon"
