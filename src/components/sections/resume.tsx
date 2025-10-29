@@ -26,7 +26,7 @@ export default function Resume() {
         <h2>A summary of My Resume</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 gap-12">
         <div>
           <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
              <GraduationCap className="h-6 w-6 text-primary" /> My Education
