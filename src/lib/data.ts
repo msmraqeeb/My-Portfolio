@@ -118,6 +118,12 @@ export const portfolio = [
     link: 'https://kidsparadise.com.bd/',
   },
   {
+    title: 'CorneliusDavisJr',
+    category: 'Web Design',
+    image: 'project-cornelius',
+    link: 'https://corneliusdavisjr.com/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',
