@@ -1,17 +1,20 @@
 import { resume } from '@/lib/data';
 import { GraduationCap, Briefcase } from 'lucide-react';
 
-const ResumeItem = ({ year, title, institution, description }: { year: string, title: string, institution: string, description: string }) => (
-  <div className="relative pl-8 py-2 border-l-2 border-primary/20">
-    <div className="absolute -left-[9px] top-3 h-4 w-4 rounded-full bg-primary border-2 border-background"></div>
-    <div className="mb-1">
-      <span className="inline-block text-sm text-muted-foreground">{year}</span>
-    </div>
-    <h3 className="text-xl font-semibold">
-      {title}
-    </h3>
-    <p className="text-primary mb-2">{institution}</p>
-    <p className="text-muted-foreground mt-2">{description}</p>
+const ResumeItem = ({ icon: Icon, year, title, institution, description }: { icon: React.ElementType, year: string, title: string, institution: string, description: string }) => (
+  <div className="group relative flex gap-x-8">
+      <div className="relative">
+          <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-card border-2 border-primary text-primary">
+              <Icon className="h-6 w-6" />
+          </div>
+          <div className="absolute top-12 left-1/2 w-px h-full bg-border group-last:hidden"></div>
+      </div>
+      <div className="flex-1 rounded-lg bg-card p-6 transition-transform duration-300 group-hover:scale-[1.02] shadow-sm border">
+          <p className="text-sm text-muted-foreground mb-2">{year}</p>
+          <h3 className="text-xl font-bold mb-1">{title}</h3>
+          <p className="text-primary font-medium mb-3">{institution}</p>
+          <p className="text-muted-foreground">{description}</p>
+      </div>
   </div>
 );
 
@@ -25,22 +28,22 @@ export default function Resume() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
-          <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+          <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
              <GraduationCap className="h-7 w-7 text-primary" /> My Education
           </h3>
           <div className="space-y-8">
             {resume.education.map((item, index) => (
-              <ResumeItem key={index} {...item} />
+              <ResumeItem key={index} icon={GraduationCap} {...item} />
             ))}
           </div>
         </div>
         <div>
-          <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+          <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
             <Briefcase className="h-7 w-7 text-primary" /> My Experience
           </h3>
           <div className="space-y-8">
             {resume.experience.map((item, index) => (
-              <ResumeItem key={index} {...item} />
+              <ResumeItem key={index} icon={Briefcase} {...item} />
             ))}
           </div>
         </div>
