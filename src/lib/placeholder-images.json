@@ -25,6 +25,12 @@
       "imageHint": "investment website"
     },
     {
+      "id": "project-iship",
+      "description": "Screenshot of iShip website.",
+      "imageUrl": "/images/iship.jpg",
+      "imageHint": "shipping website"
+    },
+    {
       "id": "project-2",
       "description": "Mobile application interface design.",
       "imageUrl": "/images/marketing-campaign.jpg",

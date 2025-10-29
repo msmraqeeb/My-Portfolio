@@ -100,6 +100,12 @@ export const portfolio = [
     link: 'https://investusa.org/',
   },
   {
+    title: 'iShip',
+    category: 'Web Design',
+    image: 'project-iship',
+    link: 'https://ishipinc.com/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',
