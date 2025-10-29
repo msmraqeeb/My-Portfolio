@@ -31,8 +31,11 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navLinks.map(link => document.getElementById(link.href.substring(1)));
-      const scrollPosition = window.scrollY + 100;
+      const sections = navLinks
+        .map(link => (link.href.startsWith('#') ? document.getElementById(link.href.substring(1)) : null))
+        .filter(Boolean);
+        
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       let currentSection = 'home';
       for (const section of sections) {
@@ -41,8 +44,14 @@ export default function Header() {
           break;
         }
       }
+      
+      const homeElement = document.getElementById('home');
+      if (homeElement && window.scrollY < homeElement.offsetTop) {
+        currentSection = 'home';
+      }
+
       // Check if scrolled to the bottom
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 20) {
         const contactSection = document.getElementById('contact');
         if (contactSection) {
             currentSection = 'contact';
@@ -56,29 +65,34 @@ export default function Header() {
     handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  
   const NavContent = ({isMobile = false}) => (
     <>
-      <div className={cn("text-center", {"mb-8": !isMobile})}>
-        <Link href="/" className="inline-block text-2xl font-bold text-primary mb-8">
+      {isMobile && <div className={cn("text-center mb-8")}>
+        <Link href="/" className="inline-block text-2xl font-bold text-primary">
           {profile.name}
         </Link>
-      </div>
+      </div>}
 
-      <nav className="flex flex-col items-center gap-4 px-4">
+      <nav className="flex flex-col items-center gap-4 px-2">
         {navLinks.map((link) => {
-            const isActive = activeSection === link.href.substring(1) || (link.href.startsWith('/') && activeSection === link.href.substring(1));
+            const isActive = activeSection === (link.href.startsWith('#') ? link.href.substring(1) : new URL(link.href, 'http://localhost').pathname.substring(1));
             return (
-                <Button asChild variant={isActive ? 'secondary' : 'ghost'} size="icon" className="rounded-full h-12 w-12" key={link.label}>
+                <Button 
+                    asChild 
+                    variant={isActive ? 'default' : 'ghost'} 
+                    className={cn(
+                        "rounded-full transition-all duration-300 ease-in-out flex items-center justify-center",
+                        isActive ? 'w-32' : 'w-12 h-12',
+                        !isMobile && 'hover:bg-primary/10'
+                    )}
+                    key={link.label}>
                     <Link
                         href={link.href}
                         title={link.label}
-                        className={cn(
-                        'flex items-center justify-center text-lg font-medium transition-colors hover:text-primary',
-                        isActive ? 'text-primary' : 'text-muted-foreground'
-                        )}
                     >
-                        <link.icon className="h-6 w-6" />
+                        <link.icon className={cn("h-6 w-6 transition-all", { "mr-2": isActive })} />
+                        {isActive && <span>{link.label}</span>}
                     </Link>
                 </Button>
             )
@@ -103,23 +117,10 @@ export default function Header() {
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <header className="fixed top-0 left-0 z-50 h-full w-72 hidden lg:flex flex-col justify-between p-6 bg-card border-r">
-        <div>
-          <NavContent />
-        </div>
-        <div className="flex flex-col items-center gap-4">
-            <div className="flex items-center gap-2">
-              {socialLinks.map((social) => (
-                <Button key={social.name} variant="outline" size="icon" className="rounded-full" asChild>
-                  <Link href={social.url} target="_blank" rel="noopener noreferrer">
-                    <social.icon className="h-5 w-5" />
-                    <span className="sr-only">{social.name}</span>
-                  </Link>
-                </Button>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Shakil Mahmud</p>
+      {/* Desktop Floating Nav */}
+       <header className="fixed top-1/2 right-6 transform -translate-y-1/2 z-50 hidden lg:block">
+        <div className="bg-card/50 backdrop-blur-sm border border-border p-3 rounded-full">
+            <NavContent />
         </div>
       </header>
 
@@ -146,17 +147,17 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[280px] bg-card p-0">
-                  <SheetHeader className="p-4">
-                    <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
-                    <div className="flex justify-end">
-                        <SheetClose asChild>
-                            <Button variant="ghost" size="icon">
-                                <X className="h-6 w-6" />
-                            </Button>
-                        </SheetClose>
-                    </div>
+                  <SheetHeader className="p-4 border-b">
+                     <SheetTitle className="text-left text-lg font-semibold">Menu</SheetTitle>
+                     <SheetClose asChild>
+                        <Button variant="ghost" size="icon" className="absolute right-2 top-2">
+                           <X className="h-6 w-6" />
+                        </Button>
+                     </SheetClose>
                   </SheetHeader>
-                  <NavContent isMobile={true} />
+                  <div className="p-4">
+                    <NavContent isMobile={true} />
+                  </div>
               </SheetContent>
             </Sheet>
           </div>
