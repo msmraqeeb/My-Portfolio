@@ -49,6 +49,12 @@
       "imageHint": "personal website"
     },
     {
+      "id": "project-paxpro",
+      "description": "Screenshot of PaxPro website.",
+      "imageUrl": "/images/paxpro.jpg",
+      "imageHint": "business website"
+    },
+    {
       "id": "project-2",
       "description": "Mobile application interface design.",
       "imageUrl": "/images/marketing-campaign.jpg",

@@ -124,6 +124,12 @@ export const portfolio = [
     link: 'https://corneliusdavisjr.com/',
   },
   {
+    title: 'PaxPro',
+    category: 'Web Design',
+    image: 'project-paxpro',
+    link: 'https://paxpro.eu/',
+  },
+  {
     title: 'Marketing Campaign',
     category: 'Branding',
     image: 'project-2',
