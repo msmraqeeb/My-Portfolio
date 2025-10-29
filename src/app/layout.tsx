@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/header';
 import { cn } from '@/lib/utils';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({ 
   subsets: ['latin'], 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Toaster />
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
