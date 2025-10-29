@@ -56,32 +56,32 @@ export default function Contact() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div className="lg:col-span-1 space-y-6">
-            <h3 className="text-2xl font-bold">Find Me</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-xl font-bold">Find Me</h3>
+            <p className="text-muted-foreground text-sm">
                 Please feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
             </p>
              <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                    <MapPin className="h-6 w-6 text-primary mt-1" />
+                    <MapPin className="h-5 w-5 text-primary mt-1" />
                     <div>
-                        <h4 className="font-bold">Location</h4>
-                        <p className="text-muted-foreground">{profile.location}</p>
+                        <h4 className="font-bold text-sm">Location</h4>
+                        <p className="text-muted-foreground text-sm">{profile.location}</p>
                     </div>
                 </div>
                  <div className="flex items-start gap-4">
-                    <Mail className="h-6 w-6 text-primary mt-1" />
+                    <Mail className="h-5 w-5 text-primary mt-1" />
                     <div>
-                        <h4 className="font-bold">Email</h4>
-                        <a href={`mailto:${profile.contact.email}`} className="text-muted-foreground hover:text-primary transition-colors">{profile.contact.email}</a>
+                        <h4 className="font-bold text-sm">Email</h4>
+                        <a href={`mailto:${profile.contact.email}`} className="text-muted-foreground hover:text-primary transition-colors text-sm">{profile.contact.email}</a>
                     </div>
                 </div>
             </div>
-            <h4 className="text-xl font-bold pt-4 border-t mt-8">Follow Me</h4>
+            <h4 className="text-lg font-bold pt-4 border-t mt-8">Follow Me</h4>
             <div className="flex items-center gap-2">
                 {socialLinks.map((social) => (
                   <Button key={social.name} variant="outline" size="icon" className="rounded-full" asChild>
                     <Link href={social.url} target="_blank" rel="noopener noreferrer">
-                      <social.icon className="h-5 w-5" />
+                      <social.icon className="h-4 w-4" />
                       <span className="sr-only">{social.name}</span>
                     </Link>
                   </Button>
@@ -90,7 +90,7 @@ export default function Contact() {
         </div>
 
         <div className="lg:col-span-2">
-          <h3 className="text-2xl font-bold mb-6">Contact Me</h3>
+          <h3 className="text-xl font-bold mb-6">Contact Me</h3>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -100,7 +100,7 @@ export default function Contact() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Name</FormLabel>
-                      <FormControl><Input placeholder="Your Name" {...field} className="bg-card border-border h-12" /></FormControl>
+                      <FormControl><Input placeholder="Your Name" {...field} className="bg-card border-border h-11" /></FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -111,7 +111,7 @@ export default function Contact() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Email</FormLabel>
-                      <FormControl><Input placeholder="Your Email" {...field} className="bg-card border-border h-12" /></FormControl>
+                      <FormControl><Input placeholder="Your Email" {...field} className="bg-card border-border h-11" /></FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -123,7 +123,7 @@ export default function Contact() {
                 render={({ field }) => (
                   <FormItem>
                      <FormLabel>Message</FormLabel>
-                    <FormControl><Textarea placeholder="Tell me more about your needs..." className="min-h-[120px] bg-card border-border" {...field} /></FormControl>
+                    <FormControl><Textarea placeholder="Tell me more about your needs..." className="min-h-[110px] bg-card border-border" {...field} /></FormControl>
                     <FormMessage />
                   </FormItem>
                 )}

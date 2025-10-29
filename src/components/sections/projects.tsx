@@ -4,10 +4,9 @@ import Link from 'next/link';
 import { portfolio } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '../ui/button';
-import { ExternalLink } from 'lucide-react';
 import React, { useState, useMemo } from 'react';
 import { cn } from '@/lib/utils';
-import { Card, CardContent } from '../ui/card';
+import { Card } from '../ui/card';
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -27,7 +26,7 @@ export default function Projects() {
   return (
     <section id="portfolio">
       <div className="section-title">
-        <p>Portfolio</p>
+        <p>Portfolio</p>        
         <h2>My Work</h2>
       </div>
 
@@ -38,7 +37,7 @@ export default function Projects() {
             variant={activeFilter === filter ? 'default' : 'outline'}
             onClick={() => setActiveFilter(filter)}
             className={cn(
-                "rounded-full capitalize transition-all",
+                "rounded-full capitalize transition-all text-xs",
                 activeFilter === filter ? 'bg-primary text-primary-foreground' : 'bg-card'
             )}
           >
@@ -66,8 +65,8 @@ export default function Projects() {
                   )}
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-lg">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.category}</p>
+                  <h3 className="font-bold text-base">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground">{item.category}</p>
                 </div>
               </Link>
             </Card>

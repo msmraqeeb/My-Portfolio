@@ -1,11 +1,9 @@
-import Image from 'next/image';
+'use client';
+
 import { profile } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '../ui/button';
 
 export default function About() {
-  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about-picture');
-
   return (
     <section id="about">
       <div className="section-title">
@@ -14,14 +12,14 @@ export default function About() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
         <div className="lg:col-span-2">
-          <h3 className="text-2xl font-bold mb-4">
+          <h3 className="text-xl font-bold mb-4">
             I'm <span className="text-primary">{profile.name}</span>, a Living Creative Leader
           </h3>
-          <p className="text-muted-foreground mb-6 text-lg">
+          <p className="text-muted-foreground mb-6 text-base">
             {profile.about.description}
           </p>
         </div>
-        <div className="lg:col-span-1 space-y-4 text-lg">
+        <div className="lg:col-span-1 space-y-4 text-base">
           {profile.about.details.map((detail) => (
             <div key={detail.label} className="border-b border-border pb-2">
               <span className="font-bold">{detail.label}:</span>

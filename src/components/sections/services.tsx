@@ -1,5 +1,4 @@
 import { services } from '@/lib/data';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Services() {
   return (
@@ -12,11 +11,11 @@ export default function Services() {
         {services.map((service, index) => (
           <div key={index} className="flex items-start gap-6">
             <div className="text-primary mt-1">
-              <service.icon className="h-10 w-10" />
+              <service.icon className="h-8 w-8" />
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <h3 className="text-lg font-bold mb-2">{service.title}</h3>
+              <p className="text-muted-foreground text-sm">{service.description}</p>
             </div>
           </div>
         ))}

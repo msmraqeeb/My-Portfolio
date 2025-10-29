@@ -18,17 +18,17 @@ export default function Hero() {
       <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
             <div className="order-2 md:order-2 text-center md:text-left">
-                <span className="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-xs font-semibold mb-4">
                   Software Engineer
                 </span>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight flex items-center gap-4 justify-center md:justify-start">
-                  Hello! <Hand className="h-10 w-10 text-yellow-400 rotate-[20deg]" /> I Am
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight flex items-center gap-4 justify-center md:justify-start">
+                  Hello! <Hand className="h-9 w-9 text-yellow-400 rotate-[20deg]" /> I Am
                 </h1>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary mt-2">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary mt-2">
                     {profile.name}
                 </h2>
                 
-                <div className="mt-4 text-2xl md:text-3xl font-semibold text-muted-foreground flex items-center justify-center md:justify-start gap-2">
+                <div className="mt-4 text-xl md:text-2xl font-semibold text-muted-foreground flex items-center justify-center md:justify-start gap-2">
                     I am a
                     <span className="text-primary">
                         <Typewriter
@@ -43,7 +43,7 @@ export default function Hero() {
                     </span>
                 </div>
                 
-                <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg text-muted-foreground">
+                <p className="mt-6 max-w-xl mx-auto md:mx-0 text-base text-muted-foreground">
                     {profile.bio}
                 </p>
                 
@@ -55,7 +55,7 @@ export default function Hero() {
             </div>
              <div className="order-1 md:order-1 flex justify-center items-center h-full">
                 {profileImage && (
-                  <div className="relative w-[320px] h-[450px] sm:w-[380px] sm:h-[520px] lg:w-[450px] lg:h-[600px]">
+                  <div className="relative w-[300px] h-[420px] sm:w-[350px] sm:h-[490px] lg:w-[400px] lg:h-[560px]">
                     <div className="absolute inset-0 bg-primary/80 rounded-3xl -rotate-6 transform"></div>
                      <div className="absolute inset-0 bg-card rounded-3xl rotate-6 transform"></div>
                     <Image
