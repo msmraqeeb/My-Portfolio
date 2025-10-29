@@ -95,6 +95,16 @@ export const resume = {
           "Anchored news bulletins, breaking news updates, and special reports with clarity, accuracy, and journalistic integrity.",
           "Researched, scripted, and presented current affairs, feature stories, and special segments tailored to target audiences."
       ]
+    },
+    {
+      year: "Sep 2020 - Dec 2024",
+      title: "IT & E-Commerce Project Manager",
+      institution: "Radiant International",
+      description: [
+        "Manage E-commerce website (KidsParadise.com.bd) & lead the team of E-commerce",
+        "SEO, Facebook Content writing & Digital Marketing on Facebook by product/post promotion, making product banner promotion etc.",
+        "Providing overall support to E-commerce site"
+      ]
     }
   ]
 };
