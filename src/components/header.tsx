@@ -1,9 +1,8 @@
 'use client';
 import Link from 'next/link';
-import { Home, User, Briefcase, Mail, Sun, Moon, Menu, X, Code, Award, Github, Linkedin, Facebook } from 'lucide-react';
+import { Home, User, Briefcase, Mail, Sun, Moon, Code, Award, Github, Linkedin, Facebook } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from './ui/sheet';
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { profile } from '@/lib/data';
@@ -70,18 +69,8 @@ export default function Header() {
     return null;
   }
   
-  const NavContent = ({isMobile = false}) => (
-    <>
-      {isMobile && <div className={cn("text-center mb-8")}>
-        <Link href="/" className="inline-block text-lg font-bold text-primary">
-          {profile.name}
-        </Link>
-      </div>}
-
-      <nav className={cn(
-          "flex items-center gap-2",
-          isMobile ? "flex-col" : "flex-row"
-      )}>
+  const NavContent = () => (
+      <nav className="flex items-center gap-1 sm:gap-2">
         {navLinks.map((link) => {
             const isActive = activeSection === (link.href.startsWith('#') ? link.href.substring(1) : '');
             return (
@@ -89,8 +78,9 @@ export default function Header() {
                     <Button 
                         asChild 
                         variant='ghost'
+                        size="icon"
                         className={cn(
-                            "relative w-12 h-12 rounded-full transition-all duration-300 ease-in-out",
+                            "relative w-10 h-10 sm:w-12 sm:h-12 rounded-full transition-all duration-300 ease-in-out",
                             isActive ? "bg-primary text-primary-foreground" : "bg-transparent hover:bg-primary/20",
                         )}
                     >
@@ -101,31 +91,16 @@ export default function Header() {
                             <link.icon className="h-5 w-5" />
                         </Link>
                     </Button>
-                     {isActive && !isMobile && <div className="absolute -bottom-2 w-1.5 h-1.5 bg-primary rounded-full"></div>}
+                     {isActive && <div className="absolute -bottom-2 w-1.5 h-1.5 bg-primary rounded-full"></div>}
                 </div>
             )
         })}
       </nav>
-      
-      { isMobile && <div className="p-4 mt-8 border-t border-border">
-          <div className="flex justify-center gap-4">
-            {socialLinks.map((social) => (
-              <Button key={social.name} variant="outline" size="icon" className="rounded-full" asChild>
-                <Link href={social.url} target="_blank" rel="noopener noreferrer">
-                  <social.icon className="h-4 w-4" />
-                  <span className="sr-only">{social.name}</span>
-                </Link>
-              </Button>
-            ))}
-          </div>
-        </div>
-      }
-    </>
   );
 
   return (
     <>
-      <div className="fixed bottom-4 right-4 z-50 hidden lg:block">
+      <div className="fixed bottom-4 right-4 z-50">
         <Button
             variant="ghost"
             size="icon"
@@ -138,48 +113,9 @@ export default function Header() {
         </Button>
       </div>
 
-       <header className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 hidden lg:block">
+       <header className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
         <div className="glass-card p-2 rounded-full">
             <NavContent />
-        </div>
-      </header>
-
-      <header className="lg:hidden sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
-        <div className="container flex h-14 items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-primary">
-            Shakil Mahmud
-          </Link>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="w-[280px] bg-card p-0">
-                  <SheetHeader className="p-4 border-b">
-                     <SheetTitle className="sr-only">Menu</SheetTitle>
-                     <SheetClose asChild>
-                        <Button variant="ghost" size="icon" className="absolute right-2 top-2">
-                           <X className="h-5 w-5" />
-                        </Button>
-                     </SheetClose>
-                  </SheetHeader>
-                  <div className="p-4">
-                    <NavContent isMobile={true} />
-                  </div>
-              </SheetContent>
-            </Sheet>
-          </div>
         </div>
       </header>
     </>
