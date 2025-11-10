@@ -89,6 +89,12 @@
       "description": "A concept for a mobile application.",
       "imageUrl": "https://i.postimg.cc/fRFZkVmN/Ecom-erp.png",
       "imageHint": "app screen"
+    },
+    {
+      "id": "project-landing-page",
+      "description": "Screenshot of a landing page app.",
+      "imageUrl": "https://i.postimg.cc/tCwmxWSV/landing-page.png",
+      "imageHint": "app screen"
     }
   ]
 }

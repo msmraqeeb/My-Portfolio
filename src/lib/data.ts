@@ -218,5 +218,11 @@ export const portfolio = [
     category: 'App',
     image: 'project-app-concept',
     link: 'https://ecommerce-erp.vercel.app/',
+  },
+  {
+    title: 'Landing Page',
+    category: 'App',
+    image: 'project-landing-page',
+    link: 'https://landing-page-msm.vercel.app/',
   }
 ];
