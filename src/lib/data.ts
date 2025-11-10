@@ -71,7 +71,7 @@ export const resume = {
     {
       year: "2005 - 2006",
       title: "Secondary School Certificate (S.S.C)",
-      institution: "Motijheel Model School & College",
+      institution: "Motijheel Model & College",
       description: "Completed secondary education with a concentration in the science group, building a strong foundation in physics, chemistry, and mathematics."
     }
   ],
@@ -211,6 +211,12 @@ export const portfolio = [
     title: 'Social Media Content',
     category: 'Branding',
     image: 'project-6',
+    link: '#',
+  },
+  {
+    title: 'Mobile App Concept',
+    category: 'App',
+    image: 'project-app-concept',
     link: '#',
   }
 ];
