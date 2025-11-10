@@ -214,9 +214,9 @@ export const portfolio = [
     link: '#',
   },
   {
-    title: 'Mobile App Concept',
+    title: 'Ecommerce Web to ERP Connection',
     category: 'App',
     image: 'project-app-concept',
-    link: '#',
+    link: 'https://ecommerce-erp.vercel.app/',
   }
 ];
