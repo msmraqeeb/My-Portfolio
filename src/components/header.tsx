@@ -1,11 +1,10 @@
 'use client';
 import Link from 'next/link';
-import { Home, User, Briefcase, Mail, Sun, Moon, Code, Award, Github, Linkedin, Facebook } from 'lucide-react';
+import { Home, User, Briefcase, Sun, Moon, Code, Award } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { profile } from '@/lib/data';
 
 const navLinks = [
   { href: '#home', label: 'Home', icon: Home },
@@ -13,13 +12,6 @@ const navLinks = [
   { href: '#services', label: 'Services', icon: Code },
   { href: '#resume', label: 'Resume', icon: Award },
   { href: '#portfolio', label: 'Portfolio', icon: Briefcase },
-  { href: '#contact', label: 'Contact', icon: Mail },
-];
-
-const socialLinks = [
-  { name: 'GitHub', icon: Github, url: 'https://github.com/msmraqeeb' },
-  { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/msmraqeeb/' },
-  { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/shakilmahmud.rj/' },
 ];
 
 export default function Header() {
@@ -51,9 +43,12 @@ export default function Header() {
       }
 
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 20) {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-            currentSection = 'contact';
+        const lastSection = sections[sections.length - 1];
+        if(lastSection) {
+            const portfolioSection = document.getElementById('portfolio');
+            if(portfolioSection && window.scrollY + window.innerHeight >= portfolioSection.offsetTop + portfolioSection.offsetHeight) {
+                 currentSection = 'portfolio'; // A bit of a hack for the last section
+            }
         }
       }
       
