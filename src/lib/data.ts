@@ -139,6 +139,20 @@ export const resume = {
   ]
 };
 
+export const tools = [
+  { name: 'React' },
+  { name: 'Next.js' },
+  { name: 'JavaScript' },
+  { name: 'TypeScript' },
+  { name: 'Tailwind CSS' },
+  { name: 'Firebase' },
+  { name: 'Node.js' },
+  { name: 'Figma' },
+  { name: 'Git' },
+  { name: 'GitHub' },
+  { name: 'VS Code' },
+  { name: 'Photoshop' },
+];
 
 export const portfolio = [
   {

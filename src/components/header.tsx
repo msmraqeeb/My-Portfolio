@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Home, User, Briefcase, Sun, Moon, Code, Award } from 'lucide-react';
+import { Home, User, Briefcase, Sun, Moon, Code, Award, Wrench } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 import React, { useState, useEffect } from 'react';
@@ -12,6 +12,7 @@ const navLinks = [
   { href: '#services', label: 'Services', icon: Code },
   { href: '#resume', label: 'Resume', icon: Award },
   { href: '#portfolio', label: 'Portfolio', icon: Briefcase },
+  { href: '#tools', label: 'Tools', icon: Wrench },
 ];
 
 export default function Header() {
@@ -43,11 +44,11 @@ export default function Header() {
       }
 
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 20) {
-        const lastSection = sections[sections.length - 1];
-        if(lastSection) {
-            const portfolioSection = document.getElementById('portfolio');
-            if(portfolioSection && window.scrollY + window.innerHeight >= portfolioSection.offsetTop + portfolioSection.offsetHeight) {
-                 currentSection = 'portfolio'; // A bit of a hack for the last section
+        const lastSectionId = sections[sections.length - 1]?.id;
+        if (lastSectionId) {
+            const lastSectionElement = document.getElementById(lastSectionId);
+            if(lastSectionElement && window.scrollY + window.innerHeight >= lastSectionElement.offsetTop) {
+                 currentSection = lastSectionId;
             }
         }
       }
