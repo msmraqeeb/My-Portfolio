@@ -1,21 +1,48 @@
-import { tools } from '@/lib/data';
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { portfolio } from '@/lib/data';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Card } from '../ui/card';
+import { useMemo } from 'react';
 
 export default function Tools() {
+  const appProjects = useMemo(() => {
+    return portfolio.filter(item => item.category === 'App');
+  }, []);
+
   return (
     <section id="tools">
       <div className="section-title">
-        <p>What I Use</p>
-        <h2>My Tools</h2>
+        <p>My Apps</p>
+        <h2>My Featured Applications</h2>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-        {tools.map((tool, index) => (
-          <div key={index} className="flex flex-col items-center justify-center gap-3 p-4 bg-card rounded-lg shadow-sm border transition-transform hover:scale-105">
-            {/* You can use an Icon component here if you have one */}
-            {/* For now, we'll just display the name */}
-            {/* <tool.icon className="w-10 h-10 text-primary" /> */}
-            <span className="text-sm font-medium">{tool.name}</span>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+        {appProjects.map((item) => {
+          const itemImage = PlaceHolderImages.find((img) => img.id === item.image);
+          return (
+            <Card key={item.title} className="group relative rounded-lg overflow-hidden border">
+              <Link href={item.link} target='_blank' className="block">
+                <div className="overflow-hidden">
+                  {itemImage && (
+                    <Image
+                      src={itemImage.imageUrl}
+                      alt={item.title}
+                      width={600}
+                      height={450}
+                      className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-110"
+                      data-ai-hint={itemImage.imageHint}
+                    />
+                  )}
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold text-base">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground">{item.category}</p>
+                </div>
+              </Link>
+            </Card>
+          );
+        })}
       </div>
     </section>
   );
