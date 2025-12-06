@@ -14,7 +14,7 @@ export default function Tools() {
   return (
     <section id="tools">
       <div className="section-title">
-        <p>My Apps</p>
+        <p>MY TOOLS</p>
         <h2>My Featured Tools</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
