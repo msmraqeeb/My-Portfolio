@@ -9,7 +9,7 @@ export const profile = {
   location: 'Dhaka, Bangladesh',
   contact: {
     email: 'msmraqeeb@gmail.com',
-    phone: '+1 123 456 7890',
+    phone: '+8801623038344',
   },
   about: {
     description: "I am a passionate developer with a knack for creating elegant, efficient, and user-friendly digital experiences. With a strong foundation in both front-end and back-end technologies, I specialize in bringing ideas to life from concept to deployment. My goal is to always build products that provide pixel-perfect, performant experiences. By hiring me you can utilize my multi section skills so that your team will boost than before.",
