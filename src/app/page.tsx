@@ -4,6 +4,7 @@ import Services from '@/components/sections/services';
 import Resume from '@/components/sections/resume';
 import Projects from '@/components/sections/projects';
 import Tools from '@/components/sections/tools';
+import Contact from '@/components/sections/contact';
 import Footer from '@/components/footer';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Resume />
         <Projects />
         <Tools />
+        <Contact />
       </div>
       <Footer />
     </>

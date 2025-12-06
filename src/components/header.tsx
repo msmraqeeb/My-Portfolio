@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Home, User, Briefcase, Sun, Moon, Code, Award, Wrench } from 'lucide-react';
+import { Home, User, Briefcase, Sun, Moon, Code, Award, Wrench, Mail } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from './ui/button';
 import React, { useState, useEffect } from 'react';
@@ -13,6 +13,7 @@ const navLinks = [
   { href: '#resume', label: 'Resume', icon: Award },
   { href: '#portfolio', label: 'Portfolio', icon: Briefcase },
   { href: '#tools', label: 'Tools', icon: Wrench },
+  { href: '#contact', label: 'Contact', icon: Mail },
 ];
 
 export default function Header() {
