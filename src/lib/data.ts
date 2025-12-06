@@ -229,13 +229,13 @@ export const portfolio = [
   },
   {
     title: 'Ecommerce Web to ERP Connection',
-    category: 'App',
+    category: 'Tools',
     image: 'project-app-concept',
     link: 'https://ecommerce-erp.vercel.app/',
   },
   {
     title: 'Landing Page',
-    category: 'App',
+    category: 'Tools',
     image: 'project-landing-page',
     link: 'https://landing-page-msm.vercel.app/',
   }

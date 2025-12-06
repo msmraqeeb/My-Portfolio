@@ -8,14 +8,14 @@ import { useMemo } from 'react';
 
 export default function Tools() {
   const appProjects = useMemo(() => {
-    return portfolio.filter(item => item.category === 'App');
+    return portfolio.filter(item => item.category === 'Tools');
   }, []);
 
   return (
     <section id="tools">
       <div className="section-title">
         <p>My Apps</p>
-        <h2>My Featured Applications</h2>
+        <h2>My Featured Tools</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
         {appProjects.map((item) => {

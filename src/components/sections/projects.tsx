@@ -11,7 +11,7 @@ import { Card } from '../ui/card';
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const nonAppPortfolio = useMemo(() => portfolio.filter(p => p.category !== 'App'), []);
+  const nonAppPortfolio = useMemo(() => portfolio.filter(p => p.category !== 'Tools'), []);
 
   const filters = useMemo(() => {
     const allCategories = nonAppPortfolio.map(item => item.category);
