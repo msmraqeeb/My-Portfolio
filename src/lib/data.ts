@@ -238,5 +238,11 @@ export const portfolio = [
     category: 'Tools',
     image: 'project-landing-page',
     link: 'https://landing-page-msm.vercel.app/',
+  },
+  {
+    title: 'QuickScribe AI',
+    category: 'Tools',
+    image: 'project-quickscribe',
+    link: 'https://quickscribeai.vercel.app/',
   }
 ];

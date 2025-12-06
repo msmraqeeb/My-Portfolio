@@ -95,6 +95,12 @@
       "description": "Screenshot of a landing page app.",
       "imageUrl": "https://i.postimg.cc/tCwmxWSV/landing-page.png",
       "imageHint": "app screen"
+    },
+    {
+      "id": "project-quickscribe",
+      "description": "Screenshot of a QuickScribe AI app.",
+      "imageUrl": "/images/QuickScribeAI.png",
+      "imageHint": "ai app"
     }
   ]
 }
