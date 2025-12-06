@@ -16,7 +16,6 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { useToast } from '@/hooks/use-toast';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
@@ -27,8 +26,6 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
-  const { toast } = useToast();
-
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -39,12 +36,9 @@ export default function Contact() {
   });
 
   const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
-    console.log(data);
-    toast({
-      title: 'Message Sent!',
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    form.reset();
+    const subject = encodeURIComponent(`Message from ${data.name} via Portfolio`);
+    const body = encodeURIComponent(`${data.message}\n\nFrom: ${data.name} <${data.email}>`);
+    window.location.href = `mailto:${profile.contact.email}?subject=${subject}&body=${body}`;
   };
 
   return (
