@@ -9,7 +9,7 @@ const heroImage = { imageUrl: '/images/Shakil-Mahmud.jpeg', description: 'Shakil
 export default function Hero() {
   return (
     <section id="home" className="w-full py-20 md:py-32 lg:py-40">
-      <div className="px-4 md:px-6 lg:px-8 xl:px-12">
+      <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative flex justify-center items-center">
             <div className="absolute w-[280px] h-[420px] sm:w-[350px] sm:h-[525px] bg-primary/20 rounded-3xl transform -rotate-12 transition-all duration-300"></div>

@@ -38,7 +38,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
-      <div className="px-4 md:px-6 lg:px-8 xl:px-12">
+      <div className="container">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
