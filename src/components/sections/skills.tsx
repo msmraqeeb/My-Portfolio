@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CodeXml, DatabaseZap, Cloud, Paintbrush, Server, GitBranch } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const skills = [
   {
@@ -36,15 +37,18 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
+    <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+      <div className="container px-4 md:px-6 lg:px-32 xl:px-48">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
+            <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
+              MY SKILLS
+            </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-              My Skills
+              My Technical Toolkit
             </h2>
             <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A glimpse into my technical toolkit. I'm always learning and adapting to new technologies.
+              A glimpse into the technologies and tools I use. I'm always learning and adapting to new things.
             </p>
           </div>
         </div>
