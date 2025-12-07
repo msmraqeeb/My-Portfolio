@@ -29,10 +29,10 @@ const projects = [
   },
   {
     id: 'project-4',
-    title: 'E-commerce Storefront',
-    description: 'A high-performance online store with a custom headless CMS, designed for a seamless shopping experience.',
-    tags: ['Shopify', 'Next.js', 'GraphQL'],
-    link: '#',
+    title: 'Heckya',
+    description: 'Heckya is a creative agency offering events, public-relations, social-media management, web & graphic design, and videography services.',
+    tags: ['Wix'],
+    link: 'https://heckya.ca/',
   },
   {
     id: 'project-5',
