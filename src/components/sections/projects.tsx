@@ -30,7 +30,7 @@ const projects = [
   {
     id: 'project-4',
     title: 'Heckya',
-    description: 'Heckya is a creative agency offering events, public-relations, social-media-management, web & graphic design, and videography services.',
+    description: 'Heckya is a creative agency offering events, public-relations, social-media management, web & graphic design, and videography services.',
     tags: ['Wix'],
     link: 'https://heckya.ca/',
   },
@@ -47,6 +47,27 @@ const projects = [
     description: 'CorneliusDavisJr.com — a website offering financial coaching, planning, and advice services, with blog content and options like one-on-one coaching, home-buyer support, and comprehensive financial plans.',
     tags: ['Wordpress'],
     link: 'https://corneliusdavisjr.com/',
+  },
+  {
+    id: 'project-7',
+    title: 'PaxPro',
+    description: 'PaxPro — a security-services company offering tailored protection: personnel security, building & event security, traffic control, transport security, and more.',
+    tags: ['Wordpress'],
+    link: 'https://paxpro.eu/',
+  },
+  {
+    id: 'project-8',
+    title: 'One Flower',
+    description: 'One Flower — an online shop offering indoor/outdoor plants, flower bouquets, landscaping products and services.',
+    tags: ['Wordpress'],
+    link: 'https://oneflowerae.com/',
+  },
+  {
+    id: 'project-9',
+    title: 'Asayel Birds & Fish Aquariums',
+    description: 'Asayel — I’m unable to determine a clear description: the site seems inaccessible or lacks enough public content to confidently characterize.',
+    tags: ['Wordpress'],
+    link: 'https://asayel.site/',
   },
 ];
 

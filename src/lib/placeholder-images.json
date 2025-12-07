@@ -41,6 +41,24 @@
       "description": "A website for CorneliusDavisJr financial coaching.",
       "imageUrl": "/images/CorneliusDavisJr.jpg",
       "imageHint": "financial coach"
+    },
+    {
+      "id": "project-7",
+      "description": "A website for PaxPro security services.",
+      "imageUrl": "/images/paxpro.jpg",
+      "imageHint": "security services"
+    },
+    {
+      "id": "project-8",
+      "description": "A website for One Flower.",
+      "imageUrl": "/images/OneFlowerAE.jpg",
+      "imageHint": "flower shop"
+    },
+    {
+      "id": "project-9",
+      "description": "A website for Asayel Birds & Fish Aquariums.",
+      "imageUrl": "/images/Asayel.jpg",
+      "imageHint": "aquarium shop"
     }
   ]
 }
