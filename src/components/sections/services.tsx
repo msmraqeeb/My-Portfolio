@@ -37,7 +37,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="w-full py-20 md:py-32">
-      <div className="container px-4 md:px-6">
+      <div className="container">
         <div className="flex flex-col items-center space-y-6 text-center">
           <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
             WHAT I DO?
