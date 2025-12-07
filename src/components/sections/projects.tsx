@@ -23,7 +23,7 @@ const projects = [
   {
     id: 'project-3',
     title: 'iShip Inc.',
-    description: 'iShip Inc. — the website at ishipinc.com — is a freight-forwarding and logistics company that offers global shipping services, especially vehicle and cargo transport from the USA via ocean freight, container or RORO shipping, customs clearance, and inland transportation.',
+    description: 'iShip Inc. is a freight-forwarding and logistics company that offers global shipping services, especially vehicle and cargo transport from the USA via ocean freight, container or RORO shipping, customs clearance, and inland transportation.',
     tags: ['Wordpress'],
     link: 'https://ishipinc.com/',
   },
