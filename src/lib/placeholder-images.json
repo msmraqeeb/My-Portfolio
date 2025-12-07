@@ -20,9 +20,9 @@
     },
     {
       "id": "project-3",
-      "description": "Mobile application design mockup.",
-      "imageUrl": "https://images.unsplash.com/photo-1514575110897-1253ff7b2ccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzY1MDI3OTAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mobile app"
+      "description": "A website for a logistics and shipping company.",
+      "imageUrl": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dpc3RpY3N8ZW58MHx8fHwxNzY1MDgyNjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logistics shipping"
     },
     {
       "id": "project-4",
