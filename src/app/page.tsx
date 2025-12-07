@@ -5,6 +5,7 @@ import Services from '@/components/sections/services';
 import Resume from '@/components/sections/resume';
 import Skills from '@/components/sections/skills';
 import Projects from '@/components/sections/projects';
+import Tools from '@/components/sections/tools';
 import Contact from '@/components/sections/contact';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <Resume />
         <Skills />
         <Projects />
+        <Tools />
         <Contact />
       </main>
       <Footer />
