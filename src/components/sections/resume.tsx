@@ -52,6 +52,36 @@ const experience = [
       "SEO, Facebook Content writing & Digital Marketing on Facebook by product/post promotion, making product banner promotion etc.",
       "Providing overall support to E-commerce site"
     ]
+  },
+  {
+    period: "Feb 2017 - Aug 2020",
+    title: "Deputy Manager (E-Commerce)",
+    company: "mother's care",
+    description: [
+      "Work as the E-commerce Project Manager.",
+      "Identify new trends in digital marketing, evaluate new technologies and ensure the brand is at the forefront of industry developments, particularly developments in mobile marketing.",
+      "Help the team to manage and maintain the company's Social media toolsand to write and optimize content for the social networking accounts such as Facebook, Twitter, Linked In and Instagram."
+    ]
+  },
+  {
+    period: "Jan 2015 - Dec 2016",
+    title: "IT & ADMIN-in Charge",
+    company: "Sumona Housing Ltd.",
+    description: [
+      "Installing, configuring, troubleshooting operating systems, softwares, system management tools, network printers, scanners etc.",
+      "Check LAN connectivity & troubleshooting accordingly",
+      "Installing & configuring operating System, application software and others 3rd party software"
+    ]
+  },
+  {
+    period: "July 2013 - Dec 2014",
+    title: "RJ, Program Producer & Co-ordinator IT",
+    company: "Radio Bhumi 92.8 FM",
+    description: [
+      "Program producing and presenting",
+      "Program presenting (RJ)",
+      "Website maintaining"
+    ]
   }
 ];
 
