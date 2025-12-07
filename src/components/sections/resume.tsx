@@ -24,33 +24,33 @@ const education = [
 
 const experience = [
   {
-    period: "Feb 2017 - Aug 2020",
-    title: "Deputy Manager (E-Commerce)",
-    company: "mother's care",
+    period: "Jan 2025 - Present",
+    title: "Head of Creative Lead",
+    company: "Regnum Resource Ltd.",
     description: [
-      "Work as the E-commerce Project Manager.",
-      "Identify new trends in digital marketing, evaluate new technologies and ensure the brand is at the forefront of industry developments, particularly developments in mobile marketing.",
-      "Help the team to manage and maintain the company's Social media toolsand to write and optimize content for the social networking accounts such as Facebook, Twitter, Linked In and Instagram."
+      "Directed and managed the overall creative vision and output across all digital, print, and broadcast media.",
+      "Lead brainstorming sessions and creative strategy meetings to develop original content ideas aligned with brand and business goals.",
+      "Supervised the creation of video, audio, graphic, and written content for marketing campaigns, social media, and e-commerce platforms."
     ],
   },
   {
-    period: "Jan 2015 - Dec 2016",
-    title: "IT & ADMIN-in Charge",
-    company: "Sumona Housing Ltd.",
+    period: "Mar 2024 - Dec 2024",
+    title: "RJ & News Anchor",
+    company: "Capital FM 94.8",
     description: [
-        "Installing, configuring, troubleshooting operating systems, softwares, system management tools, network printers, scanners etc.",
-        "Check LAN connectivity & troubleshooting accordingly",
-        "Installing & configuring operating System, application software and others 3rd party software"
+        "Hosted live radio programs with engaging on-air presence, delivering music, talk segments, and audience interactions in a dynamic and professional manner.",
+        "Anchored news bulletins, breaking news updates, and special reports with clarity, accuracy, and journalistic integrity.",
+        "Researched, scripted, and presented current affairs, feature stories, and special segments tailored to target audiences."
     ]
   },
   {
-    period: "July 2013 - Dec 2014",
-    title: "RJ, Program Producer & Co-ordinator IT",
-    company: "Radio Bhumi 92.8 FM",
+    period: "Sep 2020 - Dec 2024",
+    title: "IT & E-Commerce Project Manager",
+    company: "Radiant International",
     description: [
-      "Program producing and presenting",
-      "Program presenting (RJ)",
-      "Website maintaining"
+      "Manage E-commerce website (KidsParadise.com.bd) & lead the team of E-commerce",
+      "SEO, Facebook Content writing & Digital Marketing on Facebook by product/post promotion, making product banner promotion etc.",
+      "Providing overall support to E-commerce site"
     ]
   }
 ];
