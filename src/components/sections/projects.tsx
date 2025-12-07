@@ -69,6 +69,20 @@ const projects = [
     tags: ['Wordpress'],
     link: 'https://asayel.site/',
   },
+  {
+    id: 'project-10',
+    title: 'A Reflection Within',
+    description: 'A Reflection Within (areflectionwithin.com) — A site for a healing & personal-transformation service offering life-coaching, hypnosis, Reiki, mindset work, and other holistic healing resources.',
+    tags: ['Wordpress'],
+    link: 'https://areflectionwithin.com/',
+  },
+  {
+    id: 'project-11',
+    title: 'Priority Real Estate Ltd.',
+    description: 'Priority Real Estate Ltd.  — A real-estate firm in Bangladesh providing residential and commercial property services, including apartments and office spaces.',
+    tags: ['Wordpress'],
+    link: 'https://priorityrealestatebd.com/',
+  }
 ];
 
 export default function Projects() {

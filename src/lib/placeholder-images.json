@@ -59,6 +59,18 @@
       "description": "A website for Asayel Birds & Fish Aquariums.",
       "imageUrl": "/images/Asayel.jpg",
       "imageHint": "aquarium shop"
+    },
+    {
+      "id": "project-10",
+      "description": "A website for A Reflection Within.",
+      "imageUrl": "/images/A-Reflection-Within.jpg",
+      "imageHint": "healing service"
+    },
+    {
+      "id": "project-11",
+      "description": "A website for Priority Real Estate Ltd.",
+      "imageUrl": "/images/priority.jpg",
+      "imageHint": "real estate"
     }
   ]
 }
