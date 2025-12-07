@@ -30,6 +30,18 @@ const projects = [
     description: 'A high-performance online store with a custom headless CMS, designed for a seamless shopping experience.',
     tags: ['Shopify', 'Next.js', 'GraphQL'],
   },
+  {
+    id: 'project-5',
+    title: 'AI Chatbot Integration',
+    description: 'An intelligent chatbot for customer support, integrated with a live-chat feature and knowledge base.',
+    tags: ['GenAI', 'Next.js', 'Vercel'],
+  },
+  {
+    id: 'project-6',
+    title: 'Project Management Tool',
+    description: 'A collaborative tool for teams to manage tasks, track progress, and communicate effectively.',
+    tags: ['React', 'Node.js', 'Websockets'],
+  },
 ];
 
 export default function Projects() {
@@ -46,7 +58,7 @@ export default function Projects() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
           {projects.map(project => {
             const projectImage = PlaceHolderImages.find(img => img.id === project.id);
             return (
