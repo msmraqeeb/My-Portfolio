@@ -7,6 +7,9 @@ import FloatingMenu from '@/components/floating-menu';
 export const metadata: Metadata = {
   title: 'Shakil Mahmud',
   description: 'A professional, modern portfolio to showcase your work and skills.',
+  icons: {
+    icon: '/sm-favi.png',
+  },
 };
 
 export default function RootLayout({
