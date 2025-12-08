@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
+import FloatingMenu from '@/components/floating-menu';
 
 export const metadata: Metadata = {
   title: 'Apex Portfolio',
@@ -28,6 +29,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <FloatingMenu />
           <Toaster />
         </ThemeProvider>
       </body>
