@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Home, User, Briefcase, Award, Code, Wrench, Mail } from 'lucide-react';
+import { Home, User, Briefcase, Award, Code, Wrench, Mail, HardHat } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -13,6 +13,7 @@ const menuItems = [
   { href: '#resume', label: 'Resume', icon: <Award className="h-5 w-5" /> },
   { href: '#skills', label: 'Skills', icon: <Code className="h-5 w-5" /> },
   { href: '#projects', label: 'Portfolio', icon: <Wrench className="h-5 w-5" /> },
+  { href: '#tools', label: 'My Tools', icon: <HardHat className="h-5 w-5" /> },
   { href: '#contact', label: 'Contact', icon: <Mail className="h-5 w-5" /> },
 ];
 
