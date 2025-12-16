@@ -38,10 +38,10 @@ export default function Tools() {
             MY TOOLS
           </Badge>
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-            My Development Arsenal
+            My Custom-Built Tools
           </h2>
           <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            The tools and software I use to bring projects to life.
+            Here are some of the custom tools I've built to solve real-world problems.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
