@@ -20,6 +20,13 @@ const tools = [
     tags: ['Next'],
     link: 'https://euro-it-accounts.vercel.app/',
   },
+  {
+    id: 'tool-3',
+    title: 'ShakBot',
+    description: 'ShakBot is an AI-powered chatbot web app built and hosted by Shakil, providing conversational interactions or automated responses directly in the browser. It’s a lightweight, user-facing bot interface accessible online via the Vercel platform.',
+    tags: ['Next'],
+    link: 'https://shakbot.vercel.app/',
+  },
 ];
 
 export default function Tools() {
