@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Shakil Mahmud',
   description: 'A professional, modern portfolio to showcase your work and skills.',
   icons: {
-    icon: '/sm-favi.png',
+    icon: '/images/SM-Logo.jpg',
   },
 };
 
@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/images/SM-Logo.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
