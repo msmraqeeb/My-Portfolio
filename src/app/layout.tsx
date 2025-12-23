@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: 'Shakil Mahmud',
   description: 'A professional, modern portfolio to showcase your work and skills.',
   icons: {
-    icon: '/images/sm-favi.png',
-    shortcut: '/images/sm-favi.png',
-    apple: '/images/SM-Logo.jpg',
+    icon: '/images/shakil-favi.ico',
+    shortcut: '/images/shakil-favi.ico',
+    apple: '/images/shakil-favi.ico',
   },
 };
 
@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/images/sm-favi.png" sizes="32x32" />
-        <link rel="icon" href="/images/SM-Logo.jpg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/images/SM-Logo.jpg" />
-        <meta name="msapplication-TileImage" content="/images/SM-Logo.jpg" />
+        <link rel="icon" href="/images/shakil-favi.ico" />
+        <link rel="icon" href="/images/shakil-favi.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/shakil-favi.ico" />
+        <meta name="msapplication-TileImage" content="/images/shakil-favi.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
