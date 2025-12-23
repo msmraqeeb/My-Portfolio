@@ -7,14 +7,14 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const menuItems = [
-  { href: '#home', label: 'Home', icon: <Home className="h-5 w-5" /> },
-  { href: '#about', label: 'About', icon: <User className="h-5 w-5" /> },
-  { href: '#services', label: 'Services', icon: <Briefcase className="h-5 w-5" /> },
-  { href: '#resume', label: 'Resume', icon: <Award className="h-5 w-5" /> },
-  { href: '#skills', label: 'Skills', icon: <Code className="h-5 w-5" /> },
-  { href: '#projects', label: 'Portfolio', icon: <Wrench className="h-5 w-5" /> },
-  { href: '#tools', label: 'My Tools', icon: <HardHat className="h-5 w-5" /> },
-  { href: '#contact', label: 'Contact', icon: <Mail className="h-5 w-5" /> },
+  { href: '#home', label: 'Home', icon: <Home className="h-6 w-6" /> },
+  { href: '#about', label: 'About', icon: <User className="h-6 w-6" /> },
+  { href: '#services', label: 'Services', icon: <Briefcase className="h-6 w-6" /> },
+  { href: '#resume', label: 'Resume', icon: <Award className="h-6 w-6" /> },
+  { href: '#skills', label: 'Skills', icon: <Code className="h-6 w-6" /> },
+  { href: '#projects', label: 'Portfolio', icon: <Wrench className="h-6 w-6" /> },
+  { href: '#tools', label: 'My Tools', icon: <HardHat className="h-6 w-6" /> },
+  { href: '#contact', label: 'Contact', icon: <Mail className="h-6 w-6" /> },
 ];
 
 export default function FloatingMenu() {
@@ -52,11 +52,10 @@ export default function FloatingMenu() {
               <TooltipTrigger asChild>
                 <Link
                   href={item.href}
-                  className={`flex items-center justify-center h-10 w-10 rounded-full transition-colors ${
-                    activeSection === item.href
+                  className={`flex items-center justify-center h-10 w-10 rounded-full transition-colors ${activeSection === item.href
                       ? 'bg-primary text-primary-foreground'
                       : 'hover:bg-accent hover:text-accent-foreground text-muted-foreground'
-                  }`}
+                    }`}
                 >
                   {item.icon}
                 </Link>

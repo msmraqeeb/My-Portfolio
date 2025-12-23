@@ -39,7 +39,7 @@ export default function About() {
               </li>
             </ul>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
-              <a href="/shakil-mahmud-cv.pdf" download>
+              <a href="/Md._Shakil_Mahmud_CV.pdf" download="Md._Shakil_Mahmud_CV.pdf">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </a>
