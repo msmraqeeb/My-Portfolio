@@ -32,7 +32,7 @@ const tools = [
     title: 'SnapCopy',
     description: 'SnapCopy is a minimalist productivity tool designed to instantly capture, store, and share text or code snippets through a simple web interface. It acts as a streamlined digital clipboard, allowing users to quickly save important information and access it via shareable links.',
     tags: ['Next'],
-    link: '#',
+    link: 'https://snapcopy.vercel.app/',
   },
 ];
 
