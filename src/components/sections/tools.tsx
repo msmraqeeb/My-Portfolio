@@ -34,6 +34,13 @@ const tools = [
     tags: ['Next'],
     link: 'https://snapcopy.vercel.app/',
   },
+  {
+    id: 'tool-5',
+    title: 'ContentGen',
+    description: 'ContentGen is an AI-powered social media and reel script generator designed to help businesses and content creators plan their digital content.',
+    tags: ['Next'],
+    link: 'https://contentgenmedia.vercel.app/',
+  },
 ];
 
 export default function Tools() {
