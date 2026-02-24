@@ -41,6 +41,13 @@ const tools = [
     tags: ['Next'],
     link: 'https://contentgenmedia.vercel.app/',
   },
+  {
+    id: 'tool-6',
+    title: 'Omni Coder',
+    description: 'Omni Coder is an online coding playground and problem-solving tool. It provides an interface where users can enter their code or logic problems and have the platform solve or execute them.',
+    tags: ['Next'],
+    link: 'https://omnicoder.vercel.app/',
+  },
 ];
 
 export default function Tools() {
