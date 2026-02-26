@@ -48,6 +48,13 @@ const tools = [
     tags: ['Next'],
     link: 'https://omnicoder.vercel.app/',
   },
+  {
+    id: 'tool-7',
+    title: 'GrammarMaster Pro',
+    description: 'GrammarMaster Pro is an AI-powered grammar-assistant tool designed to help users correct grammatical errors, improve sentence structure, and enhance the overall quality of their text.',
+    tags: ['Next'],
+    link: '#',
+  },
 ];
 
 export default function Tools() {
