@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { LayoutGrid, CodeXml, BarChart, Megaphone, Paintbrush, Clapperboard } from "lucide-react";
+import { LayoutGrid, CodeXml, BarChart, Megaphone, Pencil, Clapperboard, PenTool, ShoppingBag, Mic } from "lucide-react";
 
 const services = [
   {
@@ -13,9 +13,9 @@ const services = [
     description: "Building robust, scalable, and high-performance websites using modern technologies.",
   },
   {
-    icon: <BarChart className="h-8 w-8 text-primary" />,
-    title: "Business Analysis",
-    description: "Analyzing business needs and providing data-driven insights to improve processes and strategies.",
+    icon: <PenTool className="h-8 w-8 text-primary" />,
+    title: "Graphics Design",
+    description: "Creating compelling visual concepts that communicate ideas to inspire, inform, and captivate consumers.",
   },
   {
     icon: <Megaphone className="h-8 w-8 text-primary" />,
@@ -23,14 +23,24 @@ const services = [
     description: "Implementing effective online marketing strategies to boost brand visibility and engagement.",
   },
   {
-    icon: <Paintbrush className="h-8 w-8 text-primary" />,
-    title: "Brand Identity",
-    description: "Designing unique and memorable brand identities, logos, and marketing materials.",
+    icon: <Pencil className="h-8 w-8 text-primary" />,
+    title: "Content Creation",
+    description: "Developing engaging and high-quality content tailored to your target audience to drive growth and connection.",
   },
   {
     icon: <Clapperboard className="h-8 w-8 text-primary" />,
     title: "Video Editing",
     description: "Producing professional and compelling video content for various marketing needs.",
+  },
+  {
+    icon: <ShoppingBag className="h-8 w-8 text-primary" />,
+    title: "Full E-Commerce Solution",
+    description: "Developing comprehensive, end-to-end online stores with secure payment gateways, inventory management, and optimal user experiences.",
+  },
+  {
+    icon: <Mic className="h-8 w-8 text-primary" />,
+    title: "Voice Over",
+    description: "Providing professional voice over services with clear, engaging audio for commercials, narrations, and promotional content.",
   },
 ];
 
