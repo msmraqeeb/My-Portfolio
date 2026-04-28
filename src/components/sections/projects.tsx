@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import TextReveal from '@/components/text-reveal';
 
 const projects = [
   {
@@ -82,6 +83,13 @@ const projects = [
     description: 'Priority Real Estate Ltd.  — A real-estate firm in Bangladesh providing residential and commercial property services, including apartments and office spaces.',
     tags: ['Wordpress'],
     link: 'https://priorityrealestatebd.com/',
+  },
+  {
+    id: 'project-12',
+    title: 'Herb69',
+    description: 'Herb69.xyz is a promotional website for a natural health supplement marketed as "Herb69," which claims to address male sexual performance issues. The site highlights benefits such as increased stamina and potency, offering the product for sale with a money-back guarantee and cash-on-delivery options.',
+    tags: ['Next'],
+    link: 'https://herb69.xyz/',
   }
 ];
 
@@ -93,12 +101,15 @@ export default function Projects() {
           <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
             PORTFOLIO
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-            MY WORK
-          </h2>
-          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Here are some of the projects I'm proud to have worked on.
-          </p>
+          <TextReveal 
+            as="h2"
+            text="MY WORK"
+            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline justify-center"
+          />
+          <TextReveal 
+            text="Here are some of the projects I'm proud to have worked on." 
+            className="text-center justify-center max-w-[900px] mx-auto md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" 
+          />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
           {projects.map(project => {
@@ -123,7 +134,7 @@ export default function Projects() {
                       {project.title}
                       <ArrowUpRight className="h-6 w-6 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </CardTitle>
-                    <CardDescription className="mt-2">{project.description}</CardDescription>
+                    <TextReveal text={project.description} className="mt-2 text-sm" />
                   </div>
                   <CardFooter>
                     <div className="flex flex-wrap gap-2">

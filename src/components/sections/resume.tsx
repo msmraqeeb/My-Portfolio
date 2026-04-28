@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Building2 } from "lucide-react";
+import TextReveal from "@/components/text-reveal";
 
 const education = [
   {
@@ -17,7 +18,7 @@ const education = [
   {
     period: "2005 - 2006",
     degree: "Secondary School Certificate (S.S.C)",
-    institution: "Motijheel Model & College",
+    institution: "Motijheel Model School & College",
     description: "Completed secondary education with a concentration in the science group, building a strong foundation in physics, chemistry, and mathematics.",
   },
 ];
@@ -94,12 +95,15 @@ export default function Resume() {
           <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
             RESUME
           </Badge>
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-            A SUMMARY OF MY RESUME
-          </h2>
-          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            A brief overview of my education and professional experience.
-          </p>
+          <TextReveal 
+            as="h2"
+            text="A SUMMARY OF MY RESUME"
+            className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline justify-center"
+          />
+          <TextReveal 
+            text="A brief overview of my education and professional experience." 
+            className="text-center justify-center max-w-[900px] mx-auto md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" 
+          />
         </div>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-1 gap-16">
           <div>
@@ -121,9 +125,9 @@ export default function Resume() {
                   </div>
                   <div className="flex-grow rounded-lg bg-card p-6 shadow-sm">
                     <p className="mb-2 text-sm text-muted-foreground">{item.period}</p>
-                    <h4 className="text-xl font-bold font-headline mb-1">{item.degree}</h4>
-                    <p className="text-primary font-semibold mb-3">{item.institution}</p>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <TextReveal as="h4" text={item.degree} className="text-xl font-bold font-headline mb-1" />
+                    <TextReveal as="span" text={item.institution} className="block text-primary font-semibold mb-3" />
+                    <TextReveal text={item.description} className="text-muted-foreground mt-2 text-sm" />
                   </div>
                 </div>
               ))}
@@ -149,15 +153,20 @@ export default function Resume() {
                   </div>
                   <div className="flex-grow rounded-lg bg-card p-6 shadow-sm">
                     <p className="mb-2 text-sm text-muted-foreground">{item.period}</p>
-                    <h4 className="text-xl font-bold font-headline mb-1">{item.title}</h4>
-                    <p className="text-primary font-semibold mb-3">{item.company}</p>
-                    <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+                    <TextReveal as="h4" text={item.title} className="text-xl font-bold font-headline mb-1" />
+                    <TextReveal as="span" text={item.company} className="block text-primary font-semibold mb-3" />
+                    <div className="mt-4 space-y-2">
                       {Array.isArray(item.description) ? (
-                        item.description.map((desc, i) => <li key={i}>{desc}</li>)
+                        item.description.map((desc, i) => (
+                          <div key={i} className="flex gap-2 text-muted-foreground">
+                            <span>•</span>
+                            <TextReveal text={desc} className="text-sm" />
+                          </div>
+                        ))
                       ) : (
-                        <li>{item.description}</li>
+                        <TextReveal text={item.description} className="text-sm" />
                       )}
-                    </ul>
+                    </div>
                   </div>
                 </div>
               ))}

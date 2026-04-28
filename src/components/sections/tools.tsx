@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import TextReveal from '@/components/text-reveal';
 
 const tools = [
   {
@@ -53,7 +54,7 @@ const tools = [
     title: 'GrammarMaster Pro',
     description: 'GrammarMaster Pro is an AI-powered grammar-assistant tool designed to help users correct grammatical errors, improve sentence structure, and enhance the overall quality of their text.',
     tags: ['Next'],
-    link: '#',
+    link: 'https://grammarmasterpro.vercel.app/',
   },
 ];
 
@@ -65,12 +66,15 @@ export default function Tools() {
           <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
             MY TOOLS
           </Badge>
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-            My Custom-Built Tools
-          </h2>
-          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Here are some of the custom tools I've built to solve real-world problems.
-          </p>
+          <TextReveal 
+            as="h2"
+            text="My Custom-Built Tools"
+            className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline justify-center"
+          />
+          <TextReveal 
+            text="Here are some of the custom tools I've built to solve real-world problems." 
+            className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed justify-center" 
+          />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
           {tools.map(tool => {
@@ -95,7 +99,7 @@ export default function Tools() {
                       {tool.title}
                       <ArrowUpRight className="h-6 w-6 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </CardTitle>
-                    <CardDescription className="mt-2">{tool.description}</CardDescription>
+                    <TextReveal text={tool.description} className="mt-2 text-sm" />
                   </div>
                   <CardFooter>
                     <div className="flex flex-wrap gap-2">

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CodeXml, DatabaseZap, Cloud, Paintbrush, Server, GitBranch } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import TextReveal from '@/components/text-reveal';
 
 const skills = [
   {
@@ -44,12 +45,15 @@ export default function Skills() {
             <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
               MY SKILLS
             </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-              My Technical Toolkit
-            </h2>
-            <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A glimpse into the technologies and tools I use. I'm always learning and adapting to new things.
-            </p>
+            <TextReveal 
+              as="h2"
+              text="My Technical Toolkit"
+              className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline justify-center"
+            />
+            <TextReveal 
+              text="A glimpse into the technologies and tools I use. I'm always learning and adapting to new things." 
+              className="text-center justify-center mx-auto max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" 
+            />
           </div>
         </div>
         <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-12">
@@ -57,10 +61,10 @@ export default function Skills() {
             <Card key={skill.name} className="flex flex-col items-center text-center p-6 transition-all hover:shadow-lg hover:-translate-y-2">
               <CardHeader className="p-0">
                 {skill.icon}
-                <CardTitle className="mt-4 font-headline">{skill.name}</CardTitle>
+                <TextReveal as="h4" text={skill.name} className="mt-4 font-headline font-bold text-xl justify-center" />
               </CardHeader>
               <CardContent className="p-0 mt-2">
-                <p className="text-muted-foreground">{skill.description}</p>
+                <TextReveal text={skill.description} className="text-muted-foreground justify-center text-sm" />
               </CardContent>
             </Card>
           ))}

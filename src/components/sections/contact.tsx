@@ -21,6 +21,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Mail, Github, Linkedin, Facebook, Instagram, Camera } from "lucide-react";
 import Link from "next/link";
+import TextReveal from "@/components/text-reveal";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -91,17 +92,24 @@ export default function Contact() {
           <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
             CONTACT
           </Badge>
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-            GET IN TOUCH
-          </h2>
+          <TextReveal 
+            as="h2"
+            text="GET IN TOUCH"
+            className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline justify-center"
+          />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold font-headline mb-4">Find Me</h3>
-              <p className="text-muted-foreground">
-                Please feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
-              </p>
+              <TextReveal 
+                as="h3"
+                text="Find Me"
+                className="text-2xl font-bold font-headline mb-4"
+              />
+              <TextReveal 
+                text="Please feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions."
+                className="text-muted-foreground"
+              />
             </div>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -122,7 +130,11 @@ export default function Contact() {
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold font-headline mb-4">Follow Me</h3>
+              <TextReveal 
+                as="h3"
+                text="Follow Me"
+                className="text-2xl font-bold font-headline mb-4"
+              />
               <div className="flex gap-4">
                 <Link href="https://github.com/msmraqeeb" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="h-7 w-7" />
@@ -144,7 +156,11 @@ export default function Contact() {
           </div>
 
           <div className="space-y-8">
-            <h3 className="text-2xl font-bold font-headline">Contact Me</h3>
+            <TextReveal 
+              as="h3"
+              text="Contact Me"
+              className="text-2xl font-bold font-headline"
+            />
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

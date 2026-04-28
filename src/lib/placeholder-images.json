@@ -73,6 +73,12 @@
       "imageHint": "real estate"
     },
     {
+      "id": "project-12",
+      "description": "A promotional website for Herb69 natural health supplement.",
+      "imageUrl": "/images/Herb69.png",
+      "imageHint": "health supplement website"
+    },
+    {
       "id": "tool-1",
       "description": "QuickScribe AI tool.",
       "imageUrl": "/images/QuickScribeAI.png",

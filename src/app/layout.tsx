@@ -3,6 +3,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 import FloatingMenu from '@/components/floating-menu';
+import SmoothScroll from '@/components/smooth-scroll';
 
 export const metadata: Metadata = {
   title: 'Shakil Mahmud',
@@ -28,7 +29,7 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/images/shakil-favi.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased" suppressHydrationWarning>
         <ThemeProvider
@@ -37,8 +38,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <FloatingMenu />
+          <SmoothScroll>
+            {children}
+            <FloatingMenu />
+          </SmoothScroll>
           <Toaster />
         </ThemeProvider>
       </body>

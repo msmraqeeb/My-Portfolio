@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { LayoutGrid, CodeXml, BarChart, Megaphone, Pencil, Clapperboard, PenTool, ShoppingBag, Mic } from "lucide-react";
+import TextReveal from "@/components/text-reveal";
 
 const services = [
   {
@@ -52,12 +53,15 @@ export default function Services() {
           <Badge variant="secondary" className="bg-primary/10 text-primary border-none py-1 px-3">
             WHAT I DO?
           </Badge>
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">
-            MY SERVICES
-          </h2>
-          <p className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I provide a wide range of creative and technical services to help your business succeed.
-          </p>
+          <TextReveal 
+            as="h2"
+            text="MY SERVICES"
+            className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline justify-center"
+          />
+          <TextReveal 
+            text="I provide a wide range of creative and technical services to help your business succeed." 
+            className="text-center justify-center max-w-[900px] mx-auto md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" 
+          />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 mt-12">
           {services.map((service, index) => (
@@ -65,7 +69,7 @@ export default function Services() {
               <div className="flex-shrink-0">{service.icon}</div>
               <div className="flex-grow">
                 <h3 className="text-xl font-bold font-headline mb-2">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
+                <TextReveal text={service.description} className="text-sm md:text-base" />
               </div>
             </div>
           ))}

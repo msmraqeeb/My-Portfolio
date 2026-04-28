@@ -5,6 +5,7 @@ import { Home, User, Briefcase, Award, Code, Wrench, Mail, HardHat } from 'lucid
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { useLenis } from 'lenis/react';
 
 const menuItems = [
   { href: '#home', label: 'Home', icon: <Home className="h-6 w-6" /> },
@@ -20,6 +21,17 @@ const menuItems = [
 export default function FloatingMenu() {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState('#home');
+  const lenis = useLenis();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (lenis) {
+      lenis.scrollTo(href, {
+        duration: 0.8,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,22 +57,23 @@ export default function FloatingMenu() {
 
   return (
     <TooltipProvider>
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
-        <div className="flex items-center gap-2 rounded-full bg-card border p-2 shadow-lg">
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+        <div className="flex flex-col items-center gap-4 rounded-full glass-card p-3 shadow-2xl border-white/5">
           {menuItems.map((item) => (
             <Tooltip key={item.href}>
               <TooltipTrigger asChild>
                 <Link
                   href={item.href}
-                  className={`flex items-center justify-center h-10 w-10 rounded-full transition-colors ${activeSection === item.href
-                      ? 'bg-primary text-primary-foreground'
-                      : 'hover:bg-accent hover:text-accent-foreground text-muted-foreground'
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={`flex items-center justify-center h-12 w-12 rounded-full transition-all duration-300 ${activeSection === item.href
+                      ? 'bg-white text-black scale-110 shadow-lg'
+                      : 'hover:bg-white/10 hover:text-white text-muted-foreground'
                     }`}
                 >
                   {item.icon}
                 </Link>
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipContent side="left" className="bg-white text-black font-bold">
                 <p>{item.label}</p>
               </TooltipContent>
             </Tooltip>
