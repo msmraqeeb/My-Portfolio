@@ -57,7 +57,7 @@ export default function FloatingMenu() {
 
   return (
     <TooltipProvider>
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 lg:right-6 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 z-50 w-[90%] max-w-fit lg:w-auto">
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 lg:bottom-auto lg:left-auto lg:right-6 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 z-50 w-[90%] max-w-fit lg:w-auto">
         <div className="flex flex-row lg:flex-col items-center gap-2 sm:gap-4 rounded-full glass-card p-2 sm:p-3 shadow-2xl border-white/5 overflow-x-auto no-scrollbar max-w-full">
           {menuItems.map((item) => (
             <Tooltip key={item.href}>
@@ -65,7 +65,7 @@ export default function FloatingMenu() {
                 <Link
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full transition-all duration-300 flex-shrink-0 [&>svg]:h-5 [&>svg]:w-5 sm:[&>svg]:h-6 sm:[&>svg]:w-6 ${activeSection === item.href
+                  className={`flex items-center justify-center h-10 w-10 lg:h-12 lg:w-12 rounded-full transition-all duration-300 flex-shrink-0 [&>svg]:h-5 [&>svg]:w-5 lg:[&>svg]:h-6 lg:[&>svg]:w-6 ${activeSection === item.href
                       ? 'bg-white text-black scale-110 shadow-lg'
                       : 'hover:bg-white/10 hover:text-white text-muted-foreground'
                     }`}

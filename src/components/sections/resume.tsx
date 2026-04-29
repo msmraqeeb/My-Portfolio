@@ -111,19 +111,19 @@ export default function Resume() {
               <GraduationCap className="h-8 w-8 text-primary" />
               <h3 className="text-3xl font-bold font-headline">My Education</h3>
             </div>
-            <div className="relative pl-6">
-              <div className="absolute left-[35px] top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
+            <div className="relative pl-0 sm:pl-6">
+              <div className="absolute left-7 sm:left-[35px] top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
               {education.map((item, index) => (
-                <div key={index} className="relative flex items-start gap-6 mb-8">
+                <div key={index} className="relative flex items-start gap-3 sm:gap-6 mb-8">
                   <div className="flex-shrink-0">
                     <div className="relative">
                       <div className="absolute left-1/2 top-0 h-full w-0.5 bg-transparent"></div>
-                      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-card ring-4 ring-primary">
-                        <GraduationCap className="h-7 w-7 text-primary" />
+                      <div className="relative z-10 flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-card ring-2 sm:ring-4 ring-primary">
+                        <GraduationCap className="h-5 w-5 sm:h-7 sm:w-7 text-primary" />
                       </div>
                     </div>
                   </div>
-                  <div className="flex-grow rounded-lg bg-card p-6 shadow-sm">
+                  <div className="flex-grow rounded-lg bg-card p-4 sm:p-6 shadow-sm">
                     <p className="mb-2 text-sm text-muted-foreground">{item.period}</p>
                     <TextReveal as="h4" text={item.degree} className="text-xl font-bold font-headline mb-1" />
                     <TextReveal as="span" text={item.institution} className="block text-primary font-semibold mb-3" />
@@ -139,19 +139,19 @@ export default function Resume() {
               <Building2 className="h-8 w-8 text-primary" />
               <h3 className="text-3xl font-bold font-headline">My Experience</h3>
             </div>
-            <div className="relative pl-6">
-              <div className="absolute left-[35px] top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
+            <div className="relative pl-0 sm:pl-6">
+              <div className="absolute left-7 sm:left-[35px] top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
               {experience.map((item, index) => (
-                <div key={index} className="relative flex items-start gap-6 mb-8">
+                <div key={index} className="relative flex items-start gap-3 sm:gap-6 mb-8">
                   <div className="flex-shrink-0">
                     <div className="relative">
                       <div className="absolute left-1/2 top-0 h-full w-0.5 bg-transparent"></div>
-                      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-card ring-4 ring-primary">
-                        <Building2 className="h-7 w-7 text-primary" />
+                      <div className="relative z-10 flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-card ring-2 sm:ring-4 ring-primary">
+                        <Building2 className="h-5 w-5 sm:h-7 sm:w-7 text-primary" />
                       </div>
                     </div>
                   </div>
-                  <div className="flex-grow rounded-lg bg-card p-6 shadow-sm">
+                  <div className="flex-grow rounded-lg bg-card p-4 sm:p-6 shadow-sm">
                     <p className="mb-2 text-sm text-muted-foreground">{item.period}</p>
                     <TextReveal as="h4" text={item.title} className="text-xl font-bold font-headline mb-1" />
                     <TextReveal as="span" text={item.company} className="block text-primary font-semibold mb-3" />
