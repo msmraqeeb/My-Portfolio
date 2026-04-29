@@ -130,7 +130,7 @@ export default function Projects() {
                     )}
                   </CardHeader>
                   <div className="p-6">
-                    <CardTitle className="font-headline text-2xl flex items-center justify-between">
+                    <CardTitle className="font-headline text-xl md:text-2xl flex items-center justify-between">
                       {project.title}
                       <ArrowUpRight className="h-6 w-6 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </CardTitle>

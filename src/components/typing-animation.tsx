@@ -47,7 +47,7 @@ export default function TypingAnimation() {
   }, [text, isDeleting, roleIndex]);
 
   return (
-    <p className="text-2xl font-semibold text-muted-foreground">
+    <p className="text-xl sm:text-2xl font-semibold text-muted-foreground">
       I am a <span className="text-primary">{text}</span>
       <span className="animate-ping">|</span>
     </p>

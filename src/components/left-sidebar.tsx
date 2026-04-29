@@ -22,7 +22,7 @@ export default function LeftSidebar() {
         
         {/* Signature Name */}
         <div className="absolute bottom-6 left-8 right-8 text-center sm:text-left">
-          <h2 className="text-4xl font-signature text-white drop-shadow-2xl whitespace-nowrap">
+          <h2 className="text-3xl md:text-4xl font-signature text-white drop-shadow-2xl whitespace-nowrap">
             Shakil Mahmud
           </h2>
         </div>
@@ -31,8 +31,8 @@ export default function LeftSidebar() {
       {/* Contact/Bio Section */}
       <div className="space-y-6 flex-grow">
         <div className="space-y-2">
-          <h3 className="text-2xl font-bold text-white tracking-tight break-all">msmraqeeb@gmail.com</h3>
-          <p className="text-muted-foreground flex items-center gap-2 text-lg">
+          <h3 className="text-[1.15rem] sm:text-2xl font-bold text-white tracking-tight break-words">msmraqeeb@gmail.com</h3>
+          <p className="text-muted-foreground flex items-center gap-2 text-base md:text-lg">
             <MapPin className="h-5 w-5 text-primary" />
             Based in Dhaka, Bangladesh
           </p>

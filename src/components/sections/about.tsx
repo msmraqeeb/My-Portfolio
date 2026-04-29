@@ -30,11 +30,11 @@ export default function About() {
             />
             <TextReveal 
               text="I am a passionate developer with a knack for creating elegant, efficient, and user-friendly digital experiences. With a strong foundation in both front-end and back-end technologies, I specialize in bringing ideas to life from concept to deployment. My goal is to always build products that provide pixel-perfect, performant experiences. By hiring me you can utilize my multi section skills so that your team will boost than before." 
-              className="text-lg" 
+              className="text-base sm:text-lg" 
             />
           </div>
           <div className="lg:col-span-2 space-y-6 flex flex-col items-center lg:items-start">
-            <ul className="space-y-4 text-lg w-full">
+            <ul className="space-y-4 text-base sm:text-lg w-full">
               <li className="border-b border-border pb-2 flex flex-wrap gap-2">
                 <span className="font-semibold">Name:</span> 
                 <TextReveal text="Shakil Mahmud" as="span" />

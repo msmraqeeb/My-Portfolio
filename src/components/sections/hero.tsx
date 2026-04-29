@@ -20,13 +20,13 @@ export default function Hero() {
           <TextReveal 
             as="h1"
             text="Hello! 👋 I Am Shakil Mahmud"
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] font-headline"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] font-headline"
           />
           <div className="flex flex-col space-y-4">
              <TypingAnimation />
              <TextReveal 
                text="My passion lies in crafting elegant, straightforward digital experiences. It's a love for simplicity, pure and simple." 
-               className="text-xl leading-relaxed max-w-xl" 
+               className="text-lg sm:text-xl leading-relaxed max-w-xl" 
              />
           </div>
         </div>
@@ -48,8 +48,8 @@ export default function Hero() {
                <span className="text-sm font-medium uppercase tracking-wider">Years of Experience</span>
             </div>
             <div className="flex items-baseline gap-1">
-               <h3 className="text-7xl font-bold font-headline group-hover:text-primary transition-colors">12</h3>
-               <span className="text-4xl font-bold text-primary">+</span>
+               <h3 className="text-5xl sm:text-6xl md:text-7xl font-bold font-headline group-hover:text-primary transition-colors">12</h3>
+               <span className="text-3xl sm:text-4xl font-bold text-primary">+</span>
             </div>
           </div>
 
@@ -59,8 +59,8 @@ export default function Hero() {
                <span className="text-sm font-medium uppercase tracking-wider">Success Rate</span>
             </div>
             <div className="flex items-baseline gap-1">
-               <h3 className="text-7xl font-bold font-headline group-hover:text-primary transition-colors">98</h3>
-               <span className="text-4xl font-bold text-primary">%</span>
+               <h3 className="text-5xl sm:text-6xl md:text-7xl font-bold font-headline group-hover:text-primary transition-colors">98</h3>
+               <span className="text-3xl sm:text-4xl font-bold text-primary">%</span>
             </div>
           </div>
         </div>
