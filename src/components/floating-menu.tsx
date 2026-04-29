@@ -65,7 +65,7 @@ export default function FloatingMenu() {
                 <Link
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`flex items-center justify-center h-10 w-10 lg:h-12 lg:w-12 rounded-full transition-all duration-300 flex-shrink-0 [&>svg]:h-5 [&>svg]:w-5 lg:[&>svg]:h-6 lg:[&>svg]:w-6 ${activeSection === item.href
+                  className={`flex items-center justify-center h-8 w-8 sm:h-10 lg:h-12 lg:w-12 rounded-full transition-all duration-300 flex-shrink-0 [&>svg]:h-4 [&>svg]:w-4 sm:[&>svg]:h-5 lg:[&>svg]:h-6 lg:[&>svg]:w-6 ${activeSection === item.href
                       ? 'bg-white text-black scale-110 shadow-lg'
                       : 'hover:bg-white/10 hover:text-white text-muted-foreground'
                     }`}
