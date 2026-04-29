@@ -60,7 +60,7 @@ export default function Services() {
           />
           <TextReveal 
             text="I provide a wide range of creative and technical services to help your business succeed." 
-            className="text-center justify-center max-w-[900px] mx-auto md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" 
+            className="text-center justify-center max-w-[900px] mx-auto text-sm sm:text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed" 
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12 mt-12">
@@ -68,8 +68,8 @@ export default function Services() {
             <div key={index} className="flex items-start space-x-6">
               <div className="flex-shrink-0">{service.icon}</div>
               <div className="flex-grow">
-                <h3 className="text-xl font-bold font-headline mb-2">{service.title}</h3>
-                <TextReveal text={service.description} className="text-sm md:text-base" />
+                <h3 className="text-lg sm:text-xl font-bold font-headline mb-2">{service.title}</h3>
+                <TextReveal text={service.description} className="text-[12px] sm:text-sm md:text-base" />
               </div>
             </div>
           ))}

@@ -32,35 +32,35 @@ export default function Hero() {
         </div>
 
         {/* Badges/Skills */}
-        <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 w-full sm:w-auto">
           {["Software Engineer", "Full Stack Developer", "Next.js Specialist", "UI/UX Design", "Brand Identity"].map((skill, i) => (
-            <Badge key={i} variant="secondary" className="bg-white/5 hover:bg-white/10 text-white border-white/10 px-6 py-2 rounded-full text-sm font-medium transition-all">
+            <Badge key={i} variant="secondary" className="bg-white/5 hover:bg-white/10 text-white border-white/10 px-3 sm:px-6 py-2 rounded-full text-[10px] sm:text-sm font-medium transition-all text-center justify-center">
               {skill}
             </Badge>
           ))}
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl pt-10">
-          <div className="glass-card p-10 rounded-[2.5rem] space-y-4 group hover:border-primary/30 transition-all duration-500">
-            <div className="flex items-center gap-2 text-muted-foreground">
-               <span className="w-2 h-2 bg-primary rounded-full" />
-               <span className="text-sm font-medium uppercase tracking-wider">Years of Experience</span>
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-3xl pt-10">
+          <div className="glass-card p-4 sm:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] space-y-2 sm:space-y-4 group hover:border-primary/30 transition-all duration-500 flex flex-col items-center text-center">
+            <div className="flex items-center gap-1 sm:gap-2 text-muted-foreground">
+               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full" />
+               <span className="text-[8px] sm:text-sm font-medium uppercase tracking-wider">Years of Exp.</span>
             </div>
-            <div className="flex items-baseline gap-1">
-               <h3 className="text-5xl sm:text-6xl md:text-7xl font-bold font-headline group-hover:text-primary transition-colors">12</h3>
-               <span className="text-3xl sm:text-4xl font-bold text-primary">+</span>
+            <div className="flex items-baseline gap-1 justify-center">
+               <h3 className="text-3xl sm:text-6xl md:text-7xl font-bold font-headline group-hover:text-primary transition-colors">12</h3>
+               <span className="text-xl sm:text-4xl font-bold text-primary">+</span>
             </div>
           </div>
-
-          <div className="glass-card p-10 rounded-[2.5rem] space-y-4 group hover:border-primary/30 transition-all duration-500">
-            <div className="flex items-center gap-2 text-muted-foreground">
-               <span className="w-2 h-2 bg-primary rounded-full" />
-               <span className="text-sm font-medium uppercase tracking-wider">Success Rate</span>
+ 
+          <div className="glass-card p-4 sm:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] space-y-2 sm:space-y-4 group hover:border-primary/30 transition-all duration-500 flex flex-col items-center text-center">
+            <div className="flex items-center gap-1 sm:gap-2 text-muted-foreground">
+               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full" />
+               <span className="text-[8px] sm:text-sm font-medium uppercase tracking-wider">Success Rate</span>
             </div>
-            <div className="flex items-baseline gap-1">
-               <h3 className="text-5xl sm:text-6xl md:text-7xl font-bold font-headline group-hover:text-primary transition-colors">98</h3>
-               <span className="text-3xl sm:text-4xl font-bold text-primary">%</span>
+            <div className="flex items-baseline gap-1 justify-center">
+               <h3 className="text-3xl sm:text-6xl md:text-7xl font-bold font-headline group-hover:text-primary transition-colors">98</h3>
+               <span className="text-xl sm:text-4xl font-bold text-primary">%</span>
             </div>
           </div>
         </div>

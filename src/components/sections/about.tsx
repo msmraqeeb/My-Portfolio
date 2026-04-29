@@ -18,7 +18,7 @@ export default function About() {
           />
           <TextReveal 
             text="Here's a bit about my background and what motivates me."
-            className="mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed justify-center"
+            className="mx-auto max-w-[900px] text-muted-foreground text-sm sm:text-base md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed justify-center"
           />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mt-12 items-center">
@@ -26,11 +26,11 @@ export default function About() {
             <TextReveal 
               as="h3"
               text="I'm Shakil Mahmud, a Living Creative Leader"
-              className="text-2xl sm:text-3xl font-bold"
+              className="text-xl sm:text-3xl font-bold"
             />
             <TextReveal 
               text="I am a passionate developer with a knack for creating elegant, efficient, and user-friendly digital experiences. With a strong foundation in both front-end and back-end technologies, I specialize in bringing ideas to life from concept to deployment. My goal is to always build products that provide pixel-perfect, performant experiences. By hiring me you can utilize my multi section skills so that your team will boost than before." 
-              className="text-base sm:text-lg" 
+              className="text-[13px] leading-relaxed sm:text-lg" 
             />
           </div>
           <div className="lg:col-span-2 space-y-6 flex flex-col items-center lg:items-start">

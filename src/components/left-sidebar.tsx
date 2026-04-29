@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 
 export default function LeftSidebar() {
   return (
-    <div className="w-full h-full flex flex-col gap-8 p-8 glass-card rounded-[2.5rem] overflow-hidden relative group border-white/5">
+    <div className="w-full h-full flex flex-col items-center gap-8 p-8 glass-card rounded-[2.5rem] overflow-hidden relative group border-white/5">
       {/* Profile Image Section */}
       <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl group/img">
         <Image
@@ -21,7 +21,7 @@ export default function LeftSidebar() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
         
         {/* Signature Name */}
-        <div className="absolute bottom-6 left-8 right-8 text-center sm:text-left">
+        <div className="absolute bottom-6 left-8 right-8 text-center">
           <h2 className="text-3xl md:text-4xl font-signature text-white drop-shadow-2xl whitespace-nowrap">
             Shakil Mahmud
           </h2>
@@ -29,7 +29,7 @@ export default function LeftSidebar() {
       </div>
 
       {/* Contact/Bio Section */}
-      <div className="space-y-6 flex-grow">
+      <div className="space-y-6 flex-grow text-center">
         <div className="space-y-2">
           <h3 className="text-[1.15rem] sm:text-2xl font-bold text-white tracking-tight break-words">msmraqeeb@gmail.com</h3>
           <p className="text-muted-foreground flex items-center gap-2 text-base md:text-lg">
@@ -39,7 +39,7 @@ export default function LeftSidebar() {
         </div>
 
         {/* Social Links */}
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 justify-center">
           {[
             { icon: <Github className="h-6 w-6" />, href: "https://github.com/msmraqeeb" },
             { icon: <Linkedin className="h-6 w-6" />, href: "https://www.linkedin.com/in/msmraqeeb/" },
