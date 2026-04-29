@@ -61,11 +61,11 @@ export default function LeftSidebar() {
 
       {/* Footer Action Button */}
       <div className="mt-auto">
-        <Button asChild size="lg" className="w-full py-8 rounded-full bg-[#111111] border border-white/10 text-white hover:bg-white/5 group/btn transition-all duration-300 shadow-none">
+        <Button asChild size="lg" className="w-full py-7 rounded-full bg-[#111111] border border-white/10 text-white hover:bg-white/5 group/btn transition-all duration-300 shadow-none">
           <Link href="#contact" className="flex items-center justify-between w-full px-4 font-medium text-lg">
             <span>Get Started</span>
-            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center transition-transform group-hover/btn:rotate-45">
-               <ArrowUpRight className="h-6 w-6 text-black" />
+            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center transition-transform group-hover/btn:rotate-45">
+               <ArrowUpRight className="h-5 w-5 text-black" />
             </div>
           </Link>
         </Button>

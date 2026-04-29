@@ -57,8 +57,8 @@ export default function FloatingMenu() {
 
   return (
     <TooltipProvider>
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 lg:bottom-auto lg:left-auto lg:right-6 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 z-50 w-[90%] max-w-fit lg:w-auto">
-        <div className="flex flex-row lg:flex-col items-center gap-2 sm:gap-4 rounded-full glass-card p-2 sm:p-3 shadow-2xl border-white/5 overflow-x-auto no-scrollbar max-w-full">
+      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 lg:bottom-auto lg:left-auto lg:right-6 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 z-50 w-auto max-w-[95vw]">
+        <div className="flex flex-row lg:flex-col items-center gap-1 sm:gap-4 rounded-full glass-card p-1.5 sm:p-3 shadow-2xl border-white/5 overflow-x-auto no-scrollbar">
           {menuItems.map((item) => (
             <Tooltip key={item.href}>
               <TooltipTrigger asChild>
